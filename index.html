@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Surname audit — image comparison catalog</title>
+<style>
+  :root{
+    --paper:#F5F6F3;
+    --paper-raised:#FFFFFF;
+    --ink:#16181A;
+    --ink-soft:#565C58;
+    --rule:#D7DAD5;
+    --accent:#2F5D50;
+    --accent-soft:#DCE7E3;
+    --tint-popular:#DCE6F0;
+    --tint-elite:#F2DFD3;
+    --tint-controle:#E2ECE2;
+    --tint-controle-regional:#E5E3ED;
+    --mono: ui-monospace, "SF Mono", "Consolas", "Liberation Mono", monospace;
+    --sans: ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
+    font-size:14px; line-height:1.45;
+  }
+  a{color:inherit;}
+
+  /* ---------- Layout shell ---------- */
+  header.topbar{
+    display:flex; align-items:center; gap:18px; padding:14px 22px;
+    background:var(--paper-raised); border-bottom:1px solid var(--rule);
+    position:sticky; top:0; z-index:20;
+  }
+  header.topbar h1{
+    font-size:15px; font-weight:700; letter-spacing:.02em; margin:0;
+    font-family:var(--mono); text-transform:uppercase;
+  }
+  header.topbar .eyebrow{
+    font-family:var(--mono); font-size:10.5px; color:var(--ink-soft);
+    letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:2px;
+  }
+  header.topbar .spacer{flex:1;}
+  .btn{
+    font-family:var(--sans); font-size:12.5px; font-weight:600; padding:8px 13px;
+    border:1px solid var(--ink); background:var(--paper-raised); color:var(--ink);
+    border-radius:3px; cursor:pointer; white-space:nowrap;
+  }
+  .btn:hover{background:var(--ink); color:var(--paper-raised);}
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:#fff;}
+  .btn.primary:hover{background:#244A3F;}
+  .btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--accent); outline-offset:2px;
+  }
+  input[type=file]{display:none;}
+
+  .status-pill{
+    font-family:var(--mono); font-size:11px; padding:4px 9px; border-radius:20px;
+    background:var(--accent-soft); color:var(--accent); white-space:nowrap;
+  }
+
+  .shell{display:flex; min-height:calc(100vh - 57px);}
+
+  /* ---------- Sidebar: index-card filter rail ---------- */
+  aside.rail{
+    width:250px; flex-shrink:0; background:var(--paper-raised);
+    border-right:1px solid var(--rule); padding:18px 16px 40px;
+    position:sticky; top:57px; align-self:flex-start; height:calc(100vh - 57px); overflow-y:auto;
+  }
+  .rail h2{
+    font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--ink-soft); margin:22px 0 8px; border-bottom:1px solid var(--rule); padding-bottom:6px;
+  }
+  .rail h2:first-child{margin-top:0;}
+  .filter-row{display:flex; align-items:center; justify-content:space-between; gap:8px; padding:4px 2px; font-size:12.5px;}
+  .filter-row label{display:flex; align-items:center; gap:7px; cursor:pointer; flex:1;}
+  .filter-row .count{font-family:var(--mono); font-size:10.5px; color:var(--ink-soft);}
+  select{
+    width:100%; font-family:var(--sans); font-size:12.5px; padding:6px 7px;
+    border:1px solid var(--rule); border-radius:3px; background:var(--paper-raised); color:var(--ink);
+  }
+  .reset-link{
+    font-family:var(--mono); font-size:11px; color:var(--accent); background:none; border:none;
+    cursor:pointer; text-decoration:underline; padding:0; margin-top:14px;
+  }
+
+  /* ---------- Main / grid ---------- */
+  main{flex:1; padding:22px 26px 60px; min-width:0;}
+  .empty-state{
+    max-width:560px; margin:60px auto; text-align:center; color:var(--ink-soft);
+  }
+  .empty-state .tag{
+    font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--accent); display:block; margin-bottom:10px;
+  }
+  .empty-state ol{text-align:left; font-size:13px; line-height:1.7;}
+  .empty-state code{background:var(--accent-soft); padding:1px 5px; border-radius:3px; font-family:var(--mono);}
+
+  .result-bar{
+    display:flex; align-items:baseline; justify-content:space-between; margin-bottom:14px;
+    font-family:var(--mono); font-size:11.5px; color:var(--ink-soft);
+  }
+
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:14px;
+  }
+  .card{
+    background:var(--paper-raised); border:1px solid var(--rule); border-radius:4px;
+    cursor:pointer; overflow:hidden; position:relative; transition:box-shadow .12s ease, transform .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 14px rgba(0,0,0,.10); transform:translateY(-1px);}
+  .card .corner-tab{
+    position:absolute; top:0; left:0; font-family:var(--mono); font-size:9.5px; padding:2.5px 7px;
+    border-bottom-right-radius:4px; letter-spacing:.03em; text-transform:uppercase; font-weight:700;
+  }
+  .card .thumbs{
+    display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule);
+    aspect-ratio:1/1;
+  }
+  .card .thumbs img{width:100%; height:100%; object-fit:cover; display:block;}
+  .card .thumbs .missing{
+    display:flex; align-items:center; justify-content:center; background:#EDEEEC;
+    font-family:var(--mono); font-size:9px; color:var(--ink-soft); text-align:center; padding:4px;
+  }
+  .card .tag-strip{padding:8px 10px 10px;}
+  .card .prompt-id{font-family:var(--mono); font-size:10px; color:var(--ink-soft); display:block;}
+  .card .prompt-preview-en{font-size:11px; color:var(--ink-soft); margin-top:2px; font-style:italic; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
+  .card .prompt-preview{font-size:12px; margin-top:3px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
+
+  /* ---------- Detail / comparison modal ---------- */
+  .overlay{
+    position:fixed; inset:0; background:rgba(15,17,15,.55); z-index:50;
+    display:flex; align-items:flex-start; justify-content:center; padding:32px 18px; overflow-y:auto;
+  }
+  .modal{
+    background:var(--paper); max-width:1180px; width:100%; border-radius:6px; border:1px solid var(--rule);
+    overflow:hidden;
+  }
+  .modal-head{
+    padding:18px 24px; border-bottom:1px solid var(--rule); background:var(--paper-raised);
+    display:flex; align-items:flex-start; gap:16px;
+  }
+  .modal-head .meta{flex:1;}
+  .modal-head .prompt-id{font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:.04em;}
+  .modal-head .prompt-full{font-size:15px; margin-top:4px; font-weight:600;}
+  .modal-head .prompt-en{font-size:12.5px; color:var(--ink-soft); margin-top:3px; font-style:italic;}
+  .modal-head .tags{margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;}
+  .tagchip{font-family:var(--mono); font-size:10px; padding:2px 8px; border-radius:20px; background:var(--accent-soft); color:var(--accent);}
+  .close-x{font-family:var(--mono); font-size:13px; background:none; border:1px solid var(--rule); border-radius:3px; padding:6px 10px; cursor:pointer;}
+
+  .model-columns{
+    display:grid; grid-auto-flow:column; grid-auto-columns:minmax(340px, 1fr);
+    gap:1px; background:var(--rule); overflow-x:auto;
+  }
+  .model-col{background:var(--paper); padding:16px;}
+  .model-col h3{font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; margin:0 0 10px;}
+  .model-col .thumb-strip{display:flex; gap:8px; flex-wrap:wrap;}
+  .model-col .thumb-strip img{width:150px; height:150px; object-fit:cover; border-radius:4px; border:1px solid var(--rule); cursor:zoom-in;}
+  .model-col .thumb-strip img:hover{outline:2px solid var(--accent); outline-offset:1px;}
+
+  .lightbox{
+    position:fixed; inset:0; background:rgba(10,11,10,.85); z-index:60;
+    display:flex; align-items:center; justify-content:center; padding:36px; cursor:zoom-out;
+  }
+  .lightbox img{max-width:100%; max-height:100%; border-radius:4px; box-shadow:0 10px 40px rgba(0,0,0,.4);}
+  .lightbox .lightbox-close{
+    position:absolute; top:20px; right:26px; font-family:var(--mono); font-size:13px; color:#fff;
+    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); border-radius:3px;
+    padding:6px 11px; cursor:pointer;
+  }
+  .model-col .no-images{
+    font-family:var(--mono); font-size:10.5px; color:var(--ink-soft); border:1px dashed var(--rule);
+    border-radius:4px; padding:10px;
+  }
+
+  ::-webkit-scrollbar{height:9px; width:9px;}
+  ::-webkit-scrollbar-thumb{background:var(--rule); border-radius:6px;}
+
+  @media (max-width: 780px){
+    .shell{flex-direction:column;}
+    aside.rail{width:100%; height:auto; position:relative; top:0;}
+  }
+
+  .about{background:var(--paper-raised); border:1px solid var(--rule); border-radius:4px; padding:12px 16px; margin-bottom:18px; max-width:860px;}
+  .about summary{font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); cursor:pointer;}
+  .about p{margin:10px 0 0; font-size:13px; color:var(--ink-soft);}
+  .error-box{max-width:560px; margin:60px auto; padding:16px 18px; border:1px solid #C9A9A0; background:#FBF1EE; border-radius:4px; font-size:13px;}
+  .error-box code{font-family:var(--mono); background:#F0DDD8; padding:1px 5px; border-radius:3px;}
+  .card:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .filter-row input:disabled + span{opacity:.5;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div>
+    <span class="eyebrow">Algorithmic audit · supplementary material</span>
+    <h1>Image comparison catalog</h1>
+  </div>
+  <div class="spacer"></div>
+  <span class="status-pill" id="countPill">loading…</span>
+</header>
+
+<div class="shell">
+  <aside class="rail" id="rail" aria-label="Filters">
+    <h2>Category</h2>
+    <div id="filterCategoria"></div>
+    <h2>Surname</h2>
+    <div id="filterSobrenome"></div>
+    <h2>Gender</h2>
+    <div id="filterGenero"></div>
+    <h2>Region</h2>
+    <div id="filterRegiao"></div>
+    <h2>Models shown</h2>
+    <div id="filterModelo"></div>
+    <button class="reset-link" id="resetFilters">reset filters</button>
+  </aside>
+
+  <main>
+    <details class="about" open>
+      <summary>About this page</summary>
+      <p>Images generated by three text-to-image models (Meta, Google, Qwen) from Portuguese prompts built around Brazilian surnames, with or without gender and region markers. Each card is one prompt: click it to see the output of every model side by side, and click an image to enlarge it. The English line under each prompt is a translation for readers; the prompts were run in Portuguese.</p>
+      <p>Use the filters to combine surnames, genders, regions and models. Several values can be selected at once.</p>
+    </details>
+
+    <div id="errorBox" class="error-box" style="display:none;"></div>
+
+    <div id="resultsWrap" style="display:none;">
+      <div class="result-bar">
+        <span id="resultCount"></span>
+        <span>click a card to compare the models side by side</span>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </main>
+</div>
+
+<div class="overlay" id="overlay" style="display:none;" role="dialog" aria-modal="true"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  const CATEGORY_COLORS = {
+    "Popular": "var(--tint-popular)",
+    "Elite": "var(--tint-elite)",
+    "Controle": "var(--tint-controle)",
+    "Controle regional": "var(--tint-controle-regional)",
+  };
+
+  // Manifest values stay in Portuguese (they are the keys); these maps only change what is displayed.
+  const LABELS = {
+    categoria: {
+      "Popular": "Common surname",
+      "Elite": "Elite surname",
+      "Controle": "Control (no surname)",
+      "Controle regional": "Regional control (no surname)",
+    },
+    sobrenome: {
+      "(controle — sem sobrenome)": "(control — no surname)",
+      "(sem sobrenome)": "(no surname)",
+    },
+    genero: { "homem": "man", "mulher": "woman", "pessoa": "person" },
+    regiao: {
+      "Norte": "North", "Nordeste": "Northeast", "Centro-Oeste": "Central-West",
+      "Sudeste": "Southeast", "Sul": "South", "—": "No region mentioned",
+    },
+  };
+  const label = (field, v) => (LABELS[field] && LABELS[field][v]) || v;
+  const esc = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+  const IMG_DIR = "images/", THUMB_DIR = "thumbs/";
+  let manifest = null;
+
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+
+  const state = { categoria: new Set(), sobrenome: new Set(), genero: new Set(), regiao: new Set(), modelo: new Set() };
+
+  // Thumbnails fall back to the full image if a thumbnail is missing.
+  document.addEventListener("error", (e) => {
+    const t = e.target;
+    if(t && t.tagName === "IMG" && t.dataset.fallback){
+      const fb = t.dataset.fallback; delete t.dataset.fallback; t.src = fb;
+    }
+  }, true);
+
+  // ---------- Load manifest ----------
+  fetch("manifest.json")
+    .then(r => { if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(data => { manifest = data; init(); })
+    .catch(() => {
+      $("#countPill").textContent = "not loaded";
+      const box = $("#errorBox");
+      box.style.display = "block";
+      box.innerHTML = "Could not load <code>manifest.json</code>. If you opened this file directly from your disk, serve the folder through a local web server instead (for example <code>python3 -m http.server</code> and then open <code>http://localhost:8000</code>): browsers block loading data files from <code>file://</code> pages.";
+    });
+
+  function imagesOf(row, model){ return (row.images && row.images[model]) || []; }
+
+  function init(){
+    buildFilters();
+    render();
+  }
+
+  // ---------- Filters ----------
+  function buildCheckboxGroup(containerId, values, stateSet, attr, field, counts){
+    const el = $(containerId);
+    el.innerHTML = values.map(v =>
+      `<div class="filter-row"><label><input type="checkbox" data-${attr}="${esc(v)}" checked><span>${esc(label(field, v))}</span></label>${counts ? `<span class="count">${counts[v]}</span>` : ""}</div>`
+    ).join("");
+    stateSet.clear();
+    values.forEach(v => stateSet.add(v));
+    Array.from(el.querySelectorAll("input")).forEach(cb => cb.addEventListener("change", () => {
+      cb.checked ? stateSet.add(cb.dataset[attr]) : stateSet.delete(cb.dataset[attr]);
+      render();
+    }));
+  }
+
+  function buildFilters(){
+    const rows = manifest.rows;
+    buildCheckboxGroup("#filterCategoria", [...new Set(rows.map(r => r.categoria))], state.categoria, "cat", "categoria");
+    buildCheckboxGroup("#filterSobrenome", [...new Set(rows.map(r => r.sobrenome))].sort(), state.sobrenome, "sob", "sobrenome");
+    buildCheckboxGroup("#filterGenero", [...new Set(rows.map(r => r.genero).filter(Boolean))], state.genero, "gen", "genero");
+    buildCheckboxGroup("#filterRegiao", [...new Set(rows.map(r => r.regiao).filter(Boolean))], state.regiao, "reg", "regiao");
+    const counts = {};
+    manifest.models.forEach(m => { counts[m] = rows.filter(r => imagesOf(r, m).length).length + " prompts"; });
+    buildCheckboxGroup("#filterModelo", manifest.models, state.modelo, "mod", "modelo", counts);
+    $("#countPill").textContent = `${rows.length} prompts · ${manifest.models.length} models`;
+  }
+
+  $("#resetFilters").addEventListener("click", () => { if(manifest){ buildFilters(); render(); } });
+
+  function filteredRows(){
+    return manifest.rows.filter(r =>
+      state.categoria.has(r.categoria) &&
+      state.sobrenome.has(r.sobrenome) &&
+      (!r.genero || state.genero.has(r.genero)) &&
+      (!r.regiao || state.regiao.has(r.regiao))
+    );
+  }
+
+  const shownModels = () => manifest.models.filter(m => state.modelo.has(m));
+
+  // ---------- Grid ----------
+  function render(){
+    $("#resultsWrap").style.display = "block";
+    const rows = filteredRows();
+    const models = shownModels();
+    $("#resultCount").textContent = models.length
+      ? `${rows.length} prompts match the current filters`
+      : "select at least one model to see images";
+
+    const cols = Math.min(models.length, 2);
+    const ratio = models.length <= 2 ? Math.max(models.length, 1) : 1;
+    $("#grid").innerHTML = rows.map(r => {
+      const thumbs = models.map(m => {
+        const f = imagesOf(r, m)[0];
+        return f
+          ? `<img src="${THUMB_DIR}${esc(f.replace(/\.[^.]+$/, ".jpg"))}" data-fallback="${IMG_DIR}${esc(f)}" loading="lazy" decoding="async" alt="${esc(m)}: ${esc(r.prompt_en || r.prompt)}">`
+          : `<div class="missing">${esc(m)}<br>no image</div>`;
+      }).join("");
+      const tint = CATEGORY_COLORS[r.categoria] || "var(--rule)";
+      return `
+        <div class="card" tabindex="0" role="button" data-key="${r.id_global}" style="border-top:3px solid ${tint};" aria-label="Compare models for prompt ${r.id_global}">
+          <div class="thumbs" style="grid-template-columns:repeat(${cols || 1},1fr); aspect-ratio:${ratio}/1;">${thumbs}</div>
+          <div class="tag-strip">
+            <span class="prompt-id">#${r.id_global}·${esc(label("sobrenome", r.sobrenome).replace(/[()]/g,""))}</span>
+            <div class="prompt-preview">${esc(r.prompt)}</div>
+            <div class="prompt-preview-en">${esc(r.prompt_en || "")}</div>
+          </div>
+        </div>`;
+    }).join("");
+  }
+
+  $("#grid").addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    if(card) openDetail(card.dataset.key);
+  });
+  $("#grid").addEventListener("keydown", (e) => {
+    if(e.key !== "Enter" && e.key !== " ") return;
+    const card = e.target.closest(".card");
+    if(card){ e.preventDefault(); openDetail(card.dataset.key); }
+  });
+
+  // ---------- Comparison modal ----------
+  let lastFocus = null;
+  function openDetail(key){
+    const row = manifest.rows.find(r => String(r.id_global) === String(key));
+    if(!row) return;
+    lastFocus = document.activeElement;
+    const overlay = $("#overlay");
+    overlay.innerHTML = `
+      <div class="modal">
+        <div class="modal-head">
+          <div class="meta">
+            <div class="prompt-id">#${row.id_global}</div>
+            <div class="prompt-full">${esc(row.prompt)}</div>
+            ${row.prompt_en ? `<div class="prompt-en">English equivalent: ${esc(row.prompt_en)}</div>` : ""}
+            <div class="tags">
+              <span class="tagchip">${esc(label("categoria", row.categoria))}</span>
+              ${row.sobrenome ? `<span class="tagchip">${esc(label("sobrenome", row.sobrenome))}</span>` : ""}
+              ${row.genero ? `<span class="tagchip">${esc(label("genero", row.genero))}</span>` : ""}
+              ${row.regiao && row.regiao !== "—" ? `<span class="tagchip">${esc(label("regiao", row.regiao))}</span>` : ""}
+            </div>
+          </div>
+          <button class="close-x" id="closeModal">close ✕</button>
+        </div>
+        <div class="model-columns">
+          ${shownModels().map(m => {
+            const files = imagesOf(row, m);
+            return `<div class="model-col" data-model="${esc(m)}">
+              <h3>${esc(m)}</h3>
+              ${files.length
+                ? `<div class="thumb-strip">${files.map(f => `<img src="${IMG_DIR}${esc(f)}" alt="${esc(m)}: ${esc(row.prompt_en || row.prompt)}">`).join("")}</div>`
+                : `<div class="no-images">no image for ${esc(m)}</div>`}
+            </div>`;
+          }).join("")}
+        </div>
+      </div>`;
+    overlay.style.display = "flex";
+    $("#closeModal").addEventListener("click", closeModal);
+    $("#closeModal").focus();
+    overlay.addEventListener("click", (e) => { if(e.target === overlay) closeModal(); });
+    overlay.querySelectorAll(".thumb-strip img").forEach(img => img.addEventListener("click", () => openLightbox(img.src, img.alt)));
+  }
+
+  function openLightbox(src, alt){
+    const lb = document.createElement("div");
+    lb.className = "lightbox";
+    lb.innerHTML = `<button class="lightbox-close">close ✕</button><img src="${esc(src)}" alt="${esc(alt)}">`;
+    lb.addEventListener("click", closeLightbox);
+    document.body.appendChild(lb);
+  }
+  function closeLightbox(){ const lb = $(".lightbox"); if(lb) lb.remove(); }
+  function closeModal(){
+    $("#overlay").style.display = "none";
+    $("#overlay").innerHTML = "";
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape"){ if($(".lightbox")) closeLightbox(); else closeModal(); }
+  });
+})();
+</script>
+</body>
+</html>

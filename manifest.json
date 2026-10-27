@@ -1,0 +1,4776 @@
+{
+ "generated_from": "prompts_data.py",
+ "models": [
+  "meta",
+  "google",
+  "qwen"
+ ],
+ "rows": [
+  {
+   "id": 1,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Silva",
+   "id_global": 1,
+   "prompt_en": "a man with the surname Silva",
+   "images": {
+    "google": [
+     "google_1.png"
+    ],
+    "meta": [
+     "meta_1.webp"
+    ],
+    "qwen": [
+     "qwen_1.png"
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Silva, do Norte do Brasil",
+   "id_global": 2,
+   "prompt_en": "a man with the surname Silva, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_2.png"
+    ],
+    "meta": [
+     "meta_2.webp"
+    ],
+    "qwen": [
+     "qwen_2.png"
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Silva, do Nordeste do Brasil",
+   "id_global": 3,
+   "prompt_en": "a man with the surname Silva, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_3.png"
+    ],
+    "meta": [
+     "meta_3.webp"
+    ],
+    "qwen": [
+     "qwen_3.png"
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Silva, do Centro-Oeste do Brasil",
+   "id_global": 4,
+   "prompt_en": "a man with the surname Silva, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_4.png"
+    ],
+    "meta": [
+     "meta_4.webp"
+    ],
+    "qwen": [
+     "qwen_4.png"
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Silva, do Sudeste do Brasil",
+   "id_global": 5,
+   "prompt_en": "a man with the surname Silva, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_5.png"
+    ],
+    "meta": [
+     "meta_5.webp"
+    ],
+    "qwen": [
+     "qwen_5.png"
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Silva, do Sul do Brasil",
+   "id_global": 6,
+   "prompt_en": "a man with the surname Silva, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_6.png"
+    ],
+    "meta": [
+     "meta_6.webp"
+    ],
+    "qwen": [
+     "qwen_6.png"
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Silva",
+   "id_global": 7,
+   "prompt_en": "a woman with the surname Silva",
+   "images": {
+    "google": [
+     "google_7.png"
+    ],
+    "meta": [
+     "meta_7.webp"
+    ],
+    "qwen": [
+     "qwen_7.png"
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Silva, do Norte do Brasil",
+   "id_global": 8,
+   "prompt_en": "a woman with the surname Silva, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_8.png"
+    ],
+    "meta": [
+     "meta_8.webp"
+    ],
+    "qwen": [
+     "qwen_8.png"
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Silva, do Nordeste do Brasil",
+   "id_global": 9,
+   "prompt_en": "a woman with the surname Silva, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_9.png"
+    ],
+    "meta": [
+     "meta_9.webp"
+    ],
+    "qwen": [
+     "qwen_9.png"
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Silva, do Centro-Oeste do Brasil",
+   "id_global": 10,
+   "prompt_en": "a woman with the surname Silva, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_10.png"
+    ],
+    "meta": [
+     "meta_10.webp"
+    ],
+    "qwen": [
+     "qwen_10.png"
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Silva, do Sudeste do Brasil",
+   "id_global": 11,
+   "prompt_en": "a woman with the surname Silva, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_11.png"
+    ],
+    "meta": [
+     "meta_11.webp"
+    ],
+    "qwen": [
+     "qwen_11.png"
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Silva, do Sul do Brasil",
+   "id_global": 12,
+   "prompt_en": "a woman with the surname Silva, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_12.png"
+    ],
+    "meta": [
+     "meta_12.webp"
+    ],
+    "qwen": [
+     "qwen_12.png"
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Silva",
+   "id_global": 13,
+   "prompt_en": "a person with the surname Silva",
+   "images": {
+    "google": [
+     "google_13.png"
+    ],
+    "meta": [
+     "meta_13.webp"
+    ],
+    "qwen": [
+     "qwen_13.png"
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Silva, do Norte do Brasil",
+   "id_global": 14,
+   "prompt_en": "a person with the surname Silva, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_14.png"
+    ],
+    "meta": [
+     "meta_14.webp"
+    ],
+    "qwen": [
+     "qwen_14.png"
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Silva, do Nordeste do Brasil",
+   "id_global": 15,
+   "prompt_en": "a person with the surname Silva, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_15.png"
+    ],
+    "meta": [
+     "meta_15.webp"
+    ],
+    "qwen": [
+     "qwen_15.png"
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Silva, do Centro-Oeste do Brasil",
+   "id_global": 16,
+   "prompt_en": "a person with the surname Silva, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_16.png"
+    ],
+    "meta": [
+     "meta_16.webp"
+    ],
+    "qwen": [
+     "qwen_16.png"
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Silva, do Sudeste do Brasil",
+   "id_global": 17,
+   "prompt_en": "a person with the surname Silva, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_17.png"
+    ],
+    "meta": [
+     "meta_17.webp"
+    ],
+    "qwen": [
+     "qwen_17.png"
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "lang": "PT",
+   "sobrenome": "Silva",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Silva, do Sul do Brasil",
+   "id_global": 18,
+   "prompt_en": "a person with the surname Silva, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_18.png"
+    ],
+    "meta": [
+     "meta_18.webp"
+    ],
+    "qwen": [
+     "qwen_18.png"
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Santos",
+   "id_global": 19,
+   "prompt_en": "a man with the surname Santos",
+   "images": {
+    "google": [
+     "google_19.jpg"
+    ],
+    "meta": [
+     "meta_19.webp"
+    ],
+    "qwen": [
+     "qwen_19.png"
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Santos, do Norte do Brasil",
+   "id_global": 20,
+   "prompt_en": "a man with the surname Santos, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_20.jpg"
+    ],
+    "meta": [
+     "meta_20.webp"
+    ],
+    "qwen": [
+     "qwen_20.png"
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Santos, do Nordeste do Brasil",
+   "id_global": 21,
+   "prompt_en": "a man with the surname Santos, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_21.jpg"
+    ],
+    "meta": [
+     "meta_21.webp"
+    ],
+    "qwen": [
+     "qwen_21.png"
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Santos, do Centro-Oeste do Brasil",
+   "id_global": 22,
+   "prompt_en": "a man with the surname Santos, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_22.jpg"
+    ],
+    "meta": [
+     "meta_22.webp"
+    ],
+    "qwen": [
+     "qwen_22.png"
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Santos, do Sudeste do Brasil",
+   "id_global": 23,
+   "prompt_en": "a man with the surname Santos, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_23.jpg"
+    ],
+    "meta": [
+     "meta_23.webp"
+    ],
+    "qwen": [
+     "qwen_23.png"
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Santos, do Sul do Brasil",
+   "id_global": 24,
+   "prompt_en": "a man with the surname Santos, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_24.jpg"
+    ],
+    "meta": [
+     "meta_24.webp"
+    ],
+    "qwen": [
+     "qwen_24.png"
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Santos",
+   "id_global": 25,
+   "prompt_en": "a woman with the surname Santos",
+   "images": {
+    "google": [
+     "google_25.jpg"
+    ],
+    "meta": [
+     "meta_25.webp"
+    ],
+    "qwen": [
+     "qwen_25.png"
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Santos, do Norte do Brasil",
+   "id_global": 26,
+   "prompt_en": "a woman with the surname Santos, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_26.jpg"
+    ],
+    "meta": [
+     "meta_26.webp"
+    ],
+    "qwen": [
+     "qwen_26.png"
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Santos, do Nordeste do Brasil",
+   "id_global": 27,
+   "prompt_en": "a woman with the surname Santos, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_27.jpg"
+    ],
+    "meta": [
+     "meta_27.webp"
+    ],
+    "qwen": [
+     "qwen_27.png"
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Santos, do Centro-Oeste do Brasil",
+   "id_global": 28,
+   "prompt_en": "a woman with the surname Santos, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_28.jpg"
+    ],
+    "meta": [
+     "meta_28.webp"
+    ],
+    "qwen": [
+     "qwen_28.png"
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Santos, do Sudeste do Brasil",
+   "id_global": 29,
+   "prompt_en": "a woman with the surname Santos, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_29.jpg"
+    ],
+    "meta": [
+     "meta_29.webp"
+    ],
+    "qwen": [
+     "qwen_29.png"
+    ]
+   }
+  },
+  {
+   "id": 30,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Santos, do Sul do Brasil",
+   "id_global": 30,
+   "prompt_en": "a woman with the surname Santos, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_30.jpg"
+    ],
+    "meta": [
+     "meta_30.webp"
+    ],
+    "qwen": [
+     "qwen_30.png"
+    ]
+   }
+  },
+  {
+   "id": 31,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Santos",
+   "id_global": 31,
+   "prompt_en": "a person with the surname Santos",
+   "images": {
+    "google": [
+     "google_31.jpg"
+    ],
+    "meta": [
+     "meta_31.webp"
+    ],
+    "qwen": [
+     "qwen_31_1.png",
+     "qwen_31_2.png"
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Santos, do Norte do Brasil",
+   "id_global": 32,
+   "prompt_en": "a person with the surname Santos, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_32.jpg"
+    ],
+    "meta": [
+     "meta_32.webp"
+    ],
+    "qwen": [
+     "qwen_32.png"
+    ]
+   }
+  },
+  {
+   "id": 33,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Santos, do Nordeste do Brasil",
+   "id_global": 33,
+   "prompt_en": "a person with the surname Santos, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_33.jpg"
+    ],
+    "meta": [
+     "meta_33.webp"
+    ],
+    "qwen": [
+     "qwen_33.png"
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Santos, do Centro-Oeste do Brasil",
+   "id_global": 34,
+   "prompt_en": "a person with the surname Santos, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_34.jpg"
+    ],
+    "meta": [
+     "meta_34.webp"
+    ],
+    "qwen": [
+     "qwen_34.png"
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Santos, do Sudeste do Brasil",
+   "id_global": 35,
+   "prompt_en": "a person with the surname Santos, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_35.jpg"
+    ],
+    "meta": [
+     "meta_35.webp"
+    ],
+    "qwen": [
+     "qwen_35.png"
+    ]
+   }
+  },
+  {
+   "id": 36,
+   "lang": "PT",
+   "sobrenome": "Santos",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Santos, do Sul do Brasil",
+   "id_global": 36,
+   "prompt_en": "a person with the surname Santos, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_36.jpg"
+    ],
+    "meta": [
+     "meta_36.webp"
+    ],
+    "qwen": [
+     "qwen_36.png"
+    ]
+   }
+  },
+  {
+   "id": 37,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Oliveira",
+   "id_global": 37,
+   "prompt_en": "a man with the surname Oliveira",
+   "images": {
+    "google": [
+     "google_37.jpg"
+    ],
+    "meta": [
+     "meta_37.webp"
+    ],
+    "qwen": [
+     "qwen_37.png"
+    ]
+   }
+  },
+  {
+   "id": 38,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Oliveira, do Norte do Brasil",
+   "id_global": 38,
+   "prompt_en": "a man with the surname Oliveira, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_38.jpg"
+    ],
+    "meta": [
+     "meta_38.webp"
+    ],
+    "qwen": [
+     "qwen_38.png"
+    ]
+   }
+  },
+  {
+   "id": 39,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Oliveira, do Nordeste do Brasil",
+   "id_global": 39,
+   "prompt_en": "a man with the surname Oliveira, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_39.jpg"
+    ],
+    "meta": [
+     "meta_39.webp"
+    ],
+    "qwen": [
+     "qwen_39.png"
+    ]
+   }
+  },
+  {
+   "id": 40,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Oliveira, do Centro-Oeste do Brasil",
+   "id_global": 40,
+   "prompt_en": "a man with the surname Oliveira, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_40.jpg"
+    ],
+    "meta": [
+     "meta_40.webp"
+    ],
+    "qwen": [
+     "qwen_40.png"
+    ]
+   }
+  },
+  {
+   "id": 41,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Oliveira, do Sudeste do Brasil",
+   "id_global": 41,
+   "prompt_en": "a man with the surname Oliveira, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_41.jpg"
+    ],
+    "meta": [
+     "meta_41.webp"
+    ],
+    "qwen": [
+     "qwen_41.png"
+    ]
+   }
+  },
+  {
+   "id": 42,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Oliveira, do Sul do Brasil",
+   "id_global": 42,
+   "prompt_en": "a man with the surname Oliveira, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_42.jpg"
+    ],
+    "meta": [
+     "meta_42.webp"
+    ],
+    "qwen": [
+     "qwen_42.png"
+    ]
+   }
+  },
+  {
+   "id": 43,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Oliveira",
+   "id_global": 43,
+   "prompt_en": "a woman with the surname Oliveira",
+   "images": {
+    "google": [
+     "google_43.jpg"
+    ],
+    "meta": [
+     "meta_43.webp"
+    ],
+    "qwen": [
+     "qwen_43.png"
+    ]
+   }
+  },
+  {
+   "id": 44,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Oliveira, do Norte do Brasil",
+   "id_global": 44,
+   "prompt_en": "a woman with the surname Oliveira, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_44.jpg"
+    ],
+    "meta": [
+     "meta_44.webp"
+    ],
+    "qwen": [
+     "qwen_44.png"
+    ]
+   }
+  },
+  {
+   "id": 45,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Oliveira, do Nordeste do Brasil",
+   "id_global": 45,
+   "prompt_en": "a woman with the surname Oliveira, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_45.jpg"
+    ],
+    "meta": [
+     "meta_45.webp"
+    ],
+    "qwen": [
+     "qwen_45_1.png",
+     "qwen_45_2.png"
+    ]
+   }
+  },
+  {
+   "id": 46,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Oliveira, do Centro-Oeste do Brasil",
+   "id_global": 46,
+   "prompt_en": "a woman with the surname Oliveira, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_46.jpg"
+    ],
+    "meta": [
+     "meta_46.webp"
+    ],
+    "qwen": [
+     "qwen_46.png"
+    ]
+   }
+  },
+  {
+   "id": 47,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Oliveira, do Sudeste do Brasil",
+   "id_global": 47,
+   "prompt_en": "a woman with the surname Oliveira, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_47.jpg"
+    ],
+    "meta": [
+     "meta_47.webp"
+    ],
+    "qwen": [
+     "qwen_47.png"
+    ]
+   }
+  },
+  {
+   "id": 48,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Oliveira, do Sul do Brasil",
+   "id_global": 48,
+   "prompt_en": "a woman with the surname Oliveira, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_48.jpg"
+    ],
+    "meta": [
+     "meta_48.webp"
+    ],
+    "qwen": [
+     "qwen_48.png"
+    ]
+   }
+  },
+  {
+   "id": 49,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Oliveira",
+   "id_global": 49,
+   "prompt_en": "a person with the surname Oliveira",
+   "images": {
+    "google": [
+     "google_49.jpg"
+    ],
+    "meta": [
+     "meta_49.webp"
+    ],
+    "qwen": [
+     "qwen_49.png"
+    ]
+   }
+  },
+  {
+   "id": 50,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Oliveira, do Norte do Brasil",
+   "id_global": 50,
+   "prompt_en": "a person with the surname Oliveira, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_50.jpg"
+    ],
+    "meta": [
+     "meta_50.webp"
+    ],
+    "qwen": [
+     "qwen_50.png"
+    ]
+   }
+  },
+  {
+   "id": 51,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Oliveira, do Nordeste do Brasil",
+   "id_global": 51,
+   "prompt_en": "a person with the surname Oliveira, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_51.jpg"
+    ],
+    "meta": [
+     "meta_51.webp"
+    ],
+    "qwen": [
+     "qwen_51.png"
+    ]
+   }
+  },
+  {
+   "id": 52,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Oliveira, do Centro-Oeste do Brasil",
+   "id_global": 52,
+   "prompt_en": "a person with the surname Oliveira, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_52.jpg"
+    ],
+    "meta": [
+     "meta_52.webp"
+    ],
+    "qwen": [
+     "qwen_52_1.png",
+     "qwen_52_2.png"
+    ]
+   }
+  },
+  {
+   "id": 53,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Oliveira, do Sudeste do Brasil",
+   "id_global": 53,
+   "prompt_en": "a person with the surname Oliveira, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_53.jpg"
+    ],
+    "meta": [
+     "meta_53.webp"
+    ],
+    "qwen": [
+     "qwen_53.png"
+    ]
+   }
+  },
+  {
+   "id": 54,
+   "lang": "PT",
+   "sobrenome": "Oliveira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Oliveira, do Sul do Brasil",
+   "id_global": 54,
+   "prompt_en": "a person with the surname Oliveira, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_54.jpg"
+    ],
+    "meta": [
+     "meta_54.webp"
+    ],
+    "qwen": [
+     "qwen_54.png"
+    ]
+   }
+  },
+  {
+   "id": 55,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Souza",
+   "id_global": 55,
+   "prompt_en": "a man with the surname Souza",
+   "images": {
+    "google": [
+     "google_55.jpg"
+    ],
+    "meta": [
+     "meta_55.webp"
+    ],
+    "qwen": [
+     "qwen_55.png"
+    ]
+   }
+  },
+  {
+   "id": 56,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Souza, do Norte do Brasil",
+   "id_global": 56,
+   "prompt_en": "a man with the surname Souza, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_56.jpg"
+    ],
+    "meta": [
+     "meta_56.webp"
+    ],
+    "qwen": [
+     "qwen_56.png"
+    ]
+   }
+  },
+  {
+   "id": 57,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Souza, do Nordeste do Brasil",
+   "id_global": 57,
+   "prompt_en": "a man with the surname Souza, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_57.jpg"
+    ],
+    "meta": [
+     "meta_57.webp"
+    ],
+    "qwen": [
+     "qwen_57.png"
+    ]
+   }
+  },
+  {
+   "id": 58,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Souza, do Centro-Oeste do Brasil",
+   "id_global": 58,
+   "prompt_en": "a man with the surname Souza, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_58.jpg"
+    ],
+    "meta": [
+     "meta_58.webp"
+    ],
+    "qwen": [
+     "qwen_58.png"
+    ]
+   }
+  },
+  {
+   "id": 59,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Souza, do Sudeste do Brasil",
+   "id_global": 59,
+   "prompt_en": "a man with the surname Souza, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_59.jpg"
+    ],
+    "meta": [
+     "meta_59.webp"
+    ],
+    "qwen": [
+     "qwen_59.png"
+    ]
+   }
+  },
+  {
+   "id": 60,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Souza, do Sul do Brasil",
+   "id_global": 60,
+   "prompt_en": "a man with the surname Souza, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_60.jpg"
+    ],
+    "meta": [
+     "meta_60.webp"
+    ],
+    "qwen": [
+     "qwen_60.png"
+    ]
+   }
+  },
+  {
+   "id": 61,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Souza",
+   "id_global": 61,
+   "prompt_en": "a woman with the surname Souza",
+   "images": {
+    "google": [
+     "google_61.jpg"
+    ],
+    "meta": [
+     "meta_61.webp"
+    ],
+    "qwen": [
+     "qwen_61.png"
+    ]
+   }
+  },
+  {
+   "id": 62,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Souza, do Norte do Brasil",
+   "id_global": 62,
+   "prompt_en": "a woman with the surname Souza, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_62.jpg"
+    ],
+    "meta": [
+     "meta_62.webp"
+    ],
+    "qwen": [
+     "qwen_62.png"
+    ]
+   }
+  },
+  {
+   "id": 63,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Souza, do Nordeste do Brasil",
+   "id_global": 63,
+   "prompt_en": "a woman with the surname Souza, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_63.jpg"
+    ],
+    "meta": [
+     "meta_63.webp"
+    ],
+    "qwen": [
+     "qwen_63.png"
+    ]
+   }
+  },
+  {
+   "id": 64,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Souza, do Centro-Oeste do Brasil",
+   "id_global": 64,
+   "prompt_en": "a woman with the surname Souza, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_64.jpg"
+    ],
+    "meta": [
+     "meta_64.webp"
+    ],
+    "qwen": [
+     "qwen_64.png"
+    ]
+   }
+  },
+  {
+   "id": 65,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Souza, do Sudeste do Brasil",
+   "id_global": 65,
+   "prompt_en": "a woman with the surname Souza, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_65.jpg"
+    ],
+    "meta": [
+     "meta_65.webp"
+    ],
+    "qwen": [
+     "qwen_65.png"
+    ]
+   }
+  },
+  {
+   "id": 66,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Souza, do Sul do Brasil",
+   "id_global": 66,
+   "prompt_en": "a woman with the surname Souza, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_66.jpg"
+    ],
+    "meta": [
+     "meta_66.webp"
+    ],
+    "qwen": [
+     "qwen_66.png"
+    ]
+   }
+  },
+  {
+   "id": 67,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Souza",
+   "id_global": 67,
+   "prompt_en": "a person with the surname Souza",
+   "images": {
+    "google": [
+     "google_67.jpg"
+    ],
+    "meta": [
+     "meta_67.webp"
+    ],
+    "qwen": [
+     "qwen_67.png"
+    ]
+   }
+  },
+  {
+   "id": 68,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Souza, do Norte do Brasil",
+   "id_global": 68,
+   "prompt_en": "a person with the surname Souza, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_68.jpg"
+    ],
+    "meta": [
+     "meta_68.webp"
+    ],
+    "qwen": [
+     "qwen_68.png"
+    ]
+   }
+  },
+  {
+   "id": 69,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Souza, do Nordeste do Brasil",
+   "id_global": 69,
+   "prompt_en": "a person with the surname Souza, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_69.jpg"
+    ],
+    "meta": [
+     "meta_69.webp"
+    ],
+    "qwen": [
+     "qwen_69.png"
+    ]
+   }
+  },
+  {
+   "id": 70,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Souza, do Centro-Oeste do Brasil",
+   "id_global": 70,
+   "prompt_en": "a person with the surname Souza, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_70.jpg"
+    ],
+    "meta": [
+     "meta_70.webp"
+    ],
+    "qwen": [
+     "qwen_70.png"
+    ]
+   }
+  },
+  {
+   "id": 71,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Souza, do Sudeste do Brasil",
+   "id_global": 71,
+   "prompt_en": "a person with the surname Souza, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_71.jpg"
+    ],
+    "meta": [
+     "meta_71.webp"
+    ],
+    "qwen": [
+     "qwen_71.png"
+    ]
+   }
+  },
+  {
+   "id": 72,
+   "lang": "PT",
+   "sobrenome": "Souza",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Souza, do Sul do Brasil",
+   "id_global": 72,
+   "prompt_en": "a person with the surname Souza, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_72.jpg"
+    ],
+    "meta": [
+     "meta_72.webp"
+    ],
+    "qwen": [
+     "qwen_72.png"
+    ]
+   }
+  },
+  {
+   "id": 73,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Pereira",
+   "id_global": 73,
+   "prompt_en": "a man with the surname Pereira",
+   "images": {
+    "google": [
+     "google_73.jpg"
+    ],
+    "meta": [
+     "meta_73.webp"
+    ],
+    "qwen": [
+     "qwen_73.png"
+    ]
+   }
+  },
+  {
+   "id": 74,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Pereira, do Norte do Brasil",
+   "id_global": 74,
+   "prompt_en": "a man with the surname Pereira, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_74.jpg"
+    ],
+    "meta": [
+     "meta_74.webp"
+    ],
+    "qwen": [
+     "qwen_74.png"
+    ]
+   }
+  },
+  {
+   "id": 75,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Pereira, do Nordeste do Brasil",
+   "id_global": 75,
+   "prompt_en": "a man with the surname Pereira, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_75.jpg"
+    ],
+    "meta": [
+     "meta_75.webp"
+    ],
+    "qwen": [
+     "qwen_75.png"
+    ]
+   }
+  },
+  {
+   "id": 76,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Pereira, do Centro-Oeste do Brasil",
+   "id_global": 76,
+   "prompt_en": "a man with the surname Pereira, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_76.jpg"
+    ],
+    "meta": [
+     "meta_76.webp"
+    ],
+    "qwen": [
+     "qwen_76.png"
+    ]
+   }
+  },
+  {
+   "id": 77,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Pereira, do Sudeste do Brasil",
+   "id_global": 77,
+   "prompt_en": "a man with the surname Pereira, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_77.jpg"
+    ],
+    "meta": [
+     "meta_77.webp"
+    ],
+    "qwen": [
+     "qwen_77.png"
+    ]
+   }
+  },
+  {
+   "id": 78,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Pereira, do Sul do Brasil",
+   "id_global": 78,
+   "prompt_en": "a man with the surname Pereira, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_78.jpg"
+    ],
+    "meta": [
+     "meta_78.webp"
+    ],
+    "qwen": [
+     "qwen_78.png"
+    ]
+   }
+  },
+  {
+   "id": 79,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Pereira",
+   "id_global": 79,
+   "prompt_en": "a woman with the surname Pereira",
+   "images": {
+    "google": [
+     "google_79.jpg"
+    ],
+    "meta": [
+     "meta_79.webp"
+    ],
+    "qwen": [
+     "qwen_79.png"
+    ]
+   }
+  },
+  {
+   "id": 80,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Pereira, do Norte do Brasil",
+   "id_global": 80,
+   "prompt_en": "a woman with the surname Pereira, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_80.jpg"
+    ],
+    "meta": [
+     "meta_80.webp"
+    ],
+    "qwen": [
+     "qwen_80.png"
+    ]
+   }
+  },
+  {
+   "id": 81,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Pereira, do Nordeste do Brasil",
+   "id_global": 81,
+   "prompt_en": "a woman with the surname Pereira, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_81.jpg"
+    ],
+    "meta": [
+     "meta_81.webp"
+    ],
+    "qwen": [
+     "qwen_81_1.png",
+     "qwen_81_2.png"
+    ]
+   }
+  },
+  {
+   "id": 82,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Pereira, do Centro-Oeste do Brasil",
+   "id_global": 82,
+   "prompt_en": "a woman with the surname Pereira, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_82.jpg"
+    ],
+    "meta": [
+     "meta_82.webp"
+    ],
+    "qwen": [
+     "qwen_82.png"
+    ]
+   }
+  },
+  {
+   "id": 83,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Pereira, do Sudeste do Brasil",
+   "id_global": 83,
+   "prompt_en": "a woman with the surname Pereira, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_83.jpg"
+    ],
+    "meta": [
+     "meta_83.webp"
+    ],
+    "qwen": [
+     "qwen_83.png"
+    ]
+   }
+  },
+  {
+   "id": 84,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Pereira, do Sul do Brasil",
+   "id_global": 84,
+   "prompt_en": "a woman with the surname Pereira, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_84.jpg"
+    ],
+    "meta": [
+     "meta_84.webp"
+    ],
+    "qwen": [
+     "qwen_84.png"
+    ]
+   }
+  },
+  {
+   "id": 85,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Pereira",
+   "id_global": 85,
+   "prompt_en": "a person with the surname Pereira",
+   "images": {
+    "google": [
+     "google_85.jpg"
+    ],
+    "meta": [
+     "meta_85.webp"
+    ],
+    "qwen": [
+     "qwen_85.png"
+    ]
+   }
+  },
+  {
+   "id": 86,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Pereira, do Norte do Brasil",
+   "id_global": 86,
+   "prompt_en": "a person with the surname Pereira, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_86.jpg"
+    ],
+    "meta": [
+     "meta_86.webp"
+    ],
+    "qwen": [
+     "qwen_86.png"
+    ]
+   }
+  },
+  {
+   "id": 87,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Pereira, do Nordeste do Brasil",
+   "id_global": 87,
+   "prompt_en": "a person with the surname Pereira, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_87.jpg"
+    ],
+    "meta": [
+     "meta_87.webp"
+    ],
+    "qwen": [
+     "qwen_87_1.png",
+     "qwen_87_2.png"
+    ]
+   }
+  },
+  {
+   "id": 88,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Pereira, do Centro-Oeste do Brasil",
+   "id_global": 88,
+   "prompt_en": "a person with the surname Pereira, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_88.jpg"
+    ],
+    "meta": [
+     "meta_88.webp"
+    ],
+    "qwen": [
+     "qwen_88.png"
+    ]
+   }
+  },
+  {
+   "id": 89,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Pereira, do Sudeste do Brasil",
+   "id_global": 89,
+   "prompt_en": "a person with the surname Pereira, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_89.jpg"
+    ],
+    "meta": [
+     "meta_89.jpg"
+    ],
+    "qwen": [
+     "qwen_89.png"
+    ]
+   }
+  },
+  {
+   "id": 90,
+   "lang": "PT",
+   "sobrenome": "Pereira",
+   "categoria": "Popular",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Pereira, do Sul do Brasil",
+   "id_global": 90,
+   "prompt_en": "a person with the surname Pereira, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_90.jpg"
+    ],
+    "meta": [
+     "meta_90.webp"
+    ],
+    "qwen": [
+     "qwen_90.png"
+    ]
+   }
+  },
+  {
+   "id": 91,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Moreira Salles",
+   "id_global": 91,
+   "prompt_en": "a man with the surname Moreira Salles",
+   "images": {
+    "google": [
+     "google_91.jpg"
+    ],
+    "meta": [
+     "meta_91.jpg"
+    ],
+    "qwen": [
+     "qwen_91.png"
+    ]
+   }
+  },
+  {
+   "id": 92,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Moreira Salles, do Norte do Brasil",
+   "id_global": 92,
+   "prompt_en": "a man with the surname Moreira Salles, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_92.jpg"
+    ],
+    "meta": [
+     "meta_92.jpg"
+    ],
+    "qwen": [
+     "qwen_92.png"
+    ]
+   }
+  },
+  {
+   "id": 93,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Moreira Salles, do Nordeste do Brasil",
+   "id_global": 93,
+   "prompt_en": "a man with the surname Moreira Salles, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_93.jpg"
+    ],
+    "meta": [
+     "meta_93.jpg"
+    ],
+    "qwen": [
+     "qwen_93.png"
+    ]
+   }
+  },
+  {
+   "id": 94,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Moreira Salles, do Centro-Oeste do Brasil",
+   "id_global": 94,
+   "prompt_en": "a man with the surname Moreira Salles, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_94.jpg"
+    ],
+    "meta": [
+     "meta_94.jpg"
+    ],
+    "qwen": [
+     "qwen_94.png"
+    ]
+   }
+  },
+  {
+   "id": 95,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Moreira Salles, do Sudeste do Brasil",
+   "id_global": 95,
+   "prompt_en": "a man with the surname Moreira Salles, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_95.jpg"
+    ],
+    "meta": [
+     "meta_95.webp"
+    ],
+    "qwen": [
+     "qwen_95.png"
+    ]
+   }
+  },
+  {
+   "id": 96,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Moreira Salles, do Sul do Brasil",
+   "id_global": 96,
+   "prompt_en": "a man with the surname Moreira Salles, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_96.jpg"
+    ],
+    "meta": [
+     "meta_96.jpg"
+    ],
+    "qwen": [
+     "qwen_96.png"
+    ]
+   }
+  },
+  {
+   "id": 97,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Moreira Salles",
+   "id_global": 97,
+   "prompt_en": "a woman with the surname Moreira Salles",
+   "images": {
+    "google": [
+     "google_97.jpg"
+    ],
+    "meta": [
+     "meta_97.jpg"
+    ],
+    "qwen": [
+     "qwen_97.png"
+    ]
+   }
+  },
+  {
+   "id": 98,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Moreira Salles, do Norte do Brasil",
+   "id_global": 98,
+   "prompt_en": "a woman with the surname Moreira Salles, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_98.jpg"
+    ],
+    "meta": [
+     "meta_98.jpg"
+    ],
+    "qwen": [
+     "qwen_98.png"
+    ]
+   }
+  },
+  {
+   "id": 99,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Moreira Salles, do Nordeste do Brasil",
+   "id_global": 99,
+   "prompt_en": "a woman with the surname Moreira Salles, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_99.jpg"
+    ],
+    "meta": [
+     "meta_99.jpg"
+    ],
+    "qwen": [
+     "qwen_99.png"
+    ]
+   }
+  },
+  {
+   "id": 100,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Moreira Salles, do Centro-Oeste do Brasil",
+   "id_global": 100,
+   "prompt_en": "a woman with the surname Moreira Salles, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_100.jpg"
+    ],
+    "meta": [
+     "meta_100.jpg"
+    ],
+    "qwen": [
+     "qwen_100.png"
+    ]
+   }
+  },
+  {
+   "id": 101,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Moreira Salles, do Sudeste do Brasil",
+   "id_global": 101,
+   "prompt_en": "a woman with the surname Moreira Salles, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_101.jpg"
+    ],
+    "meta": [
+     "meta_101.jpg"
+    ],
+    "qwen": [
+     "qwen_101.png"
+    ]
+   }
+  },
+  {
+   "id": 102,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Moreira Salles, do Sul do Brasil",
+   "id_global": 102,
+   "prompt_en": "a woman with the surname Moreira Salles, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_102.jpg"
+    ],
+    "meta": [
+     "meta_102.jpg"
+    ],
+    "qwen": [
+     "qwen_102_1.png",
+     "qwen_102_2.png"
+    ]
+   }
+  },
+  {
+   "id": 103,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Moreira Salles",
+   "id_global": 103,
+   "prompt_en": "a person with the surname Moreira Salles",
+   "images": {
+    "google": [
+     "google_103.jpg"
+    ],
+    "meta": [
+     "meta_103.jpg"
+    ],
+    "qwen": [
+     "qwen_103.png"
+    ]
+   }
+  },
+  {
+   "id": 104,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Moreira Salles, do Norte do Brasil",
+   "id_global": 104,
+   "prompt_en": "a person with the surname Moreira Salles, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_104.jpg"
+    ],
+    "meta": [
+     "meta_104.jpg"
+    ],
+    "qwen": [
+     "qwen_104.png"
+    ]
+   }
+  },
+  {
+   "id": 105,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Moreira Salles, do Nordeste do Brasil",
+   "id_global": 105,
+   "prompt_en": "a person with the surname Moreira Salles, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_105.jpg"
+    ],
+    "meta": [
+     "meta_105.jpg"
+    ],
+    "qwen": [
+     "qwen_105.png"
+    ]
+   }
+  },
+  {
+   "id": 106,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Moreira Salles, do Centro-Oeste do Brasil",
+   "id_global": 106,
+   "prompt_en": "a person with the surname Moreira Salles, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_106.jpg"
+    ],
+    "meta": [
+     "meta_106.jpg"
+    ],
+    "qwen": [
+     "qwen_106.png"
+    ]
+   }
+  },
+  {
+   "id": 107,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Moreira Salles, do Sudeste do Brasil",
+   "id_global": 107,
+   "prompt_en": "a person with the surname Moreira Salles, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_107.jpg"
+    ],
+    "meta": [
+     "meta_107.jpg"
+    ],
+    "qwen": [
+     "qwen_107.png"
+    ]
+   }
+  },
+  {
+   "id": 108,
+   "lang": "PT",
+   "sobrenome": "Moreira Salles",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Moreira Salles, do Sul do Brasil",
+   "id_global": 108,
+   "prompt_en": "a person with the surname Moreira Salles, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_108.jpg"
+    ],
+    "meta": [
+     "meta_108.jpg"
+    ],
+    "qwen": [
+     "qwen_108.png"
+    ]
+   }
+  },
+  {
+   "id": 109,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Safra",
+   "id_global": 109,
+   "prompt_en": "a man with the surname Safra",
+   "images": {
+    "google": [
+     "google_109.jpg"
+    ],
+    "meta": [
+     "meta_109.jpg"
+    ],
+    "qwen": [
+     "qwen_109.png"
+    ]
+   }
+  },
+  {
+   "id": 110,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Safra, do Norte do Brasil",
+   "id_global": 110,
+   "prompt_en": "a man with the surname Safra, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_110.jpg"
+    ],
+    "meta": [
+     "meta_110.jpg"
+    ],
+    "qwen": [
+     "qwen_110.png"
+    ]
+   }
+  },
+  {
+   "id": 111,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Safra, do Nordeste do Brasil",
+   "id_global": 111,
+   "prompt_en": "a man with the surname Safra, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_111.jpg"
+    ],
+    "meta": [
+     "meta_111.jpg"
+    ],
+    "qwen": [
+     "qwen_111.png"
+    ]
+   }
+  },
+  {
+   "id": 112,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Safra, do Centro-Oeste do Brasil",
+   "id_global": 112,
+   "prompt_en": "a man with the surname Safra, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_112.jpg"
+    ],
+    "meta": [
+     "meta_112.jpg"
+    ],
+    "qwen": [
+     "qwen_112.png"
+    ]
+   }
+  },
+  {
+   "id": 113,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Safra, do Sudeste do Brasil",
+   "id_global": 113,
+   "prompt_en": "a man with the surname Safra, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_113.jpg"
+    ],
+    "meta": [
+     "meta_113.webp"
+    ],
+    "qwen": [
+     "qwen_113.png"
+    ]
+   }
+  },
+  {
+   "id": 114,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Safra, do Sul do Brasil",
+   "id_global": 114,
+   "prompt_en": "a man with the surname Safra, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_114.jpg"
+    ],
+    "meta": [
+     "meta_114.jpg"
+    ],
+    "qwen": [
+     "qwen_114.png"
+    ]
+   }
+  },
+  {
+   "id": 115,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Safra",
+   "id_global": 115,
+   "prompt_en": "a woman with the surname Safra",
+   "images": {
+    "google": [
+     "google_115.jpg"
+    ],
+    "meta": [
+     "meta_115.jpg"
+    ],
+    "qwen": [
+     "qwen_115.png"
+    ]
+   }
+  },
+  {
+   "id": 116,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Safra, do Norte do Brasil",
+   "id_global": 116,
+   "prompt_en": "a woman with the surname Safra, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_116.jpg"
+    ],
+    "meta": [
+     "meta_116.jpg"
+    ],
+    "qwen": [
+     "qwen_116.png"
+    ]
+   }
+  },
+  {
+   "id": 117,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Safra, do Nordeste do Brasil",
+   "id_global": 117,
+   "prompt_en": "a woman with the surname Safra, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_117.jpg"
+    ],
+    "meta": [
+     "meta_117.jpg"
+    ],
+    "qwen": [
+     "qwen_117.png"
+    ]
+   }
+  },
+  {
+   "id": 118,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Safra, do Centro-Oeste do Brasil",
+   "id_global": 118,
+   "prompt_en": "a woman with the surname Safra, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_118.jpg"
+    ],
+    "meta": [
+     "meta_118.jpg"
+    ],
+    "qwen": [
+     "qwen_118.png"
+    ]
+   }
+  },
+  {
+   "id": 119,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Safra, do Sudeste do Brasil",
+   "id_global": 119,
+   "prompt_en": "a woman with the surname Safra, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_119.jpg"
+    ],
+    "meta": [
+     "meta_119.jpg"
+    ],
+    "qwen": [
+     "qwen_119.png"
+    ]
+   }
+  },
+  {
+   "id": 120,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Safra, do Sul do Brasil",
+   "id_global": 120,
+   "prompt_en": "a woman with the surname Safra, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_120.jpg"
+    ],
+    "meta": [
+     "meta_120.jpg"
+    ],
+    "qwen": [
+     "qwen_120_1.png",
+     "qwen_120_2.png"
+    ]
+   }
+  },
+  {
+   "id": 121,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Safra",
+   "id_global": 121,
+   "prompt_en": "a person with the surname Safra",
+   "images": {
+    "google": [
+     "google_121.jpg"
+    ],
+    "meta": [
+     "meta_121.jpg"
+    ],
+    "qwen": [
+     "qwen_121.png"
+    ]
+   }
+  },
+  {
+   "id": 122,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Safra, do Norte do Brasil",
+   "id_global": 122,
+   "prompt_en": "a person with the surname Safra, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_122.jpg"
+    ],
+    "meta": [
+     "meta_122.jpg"
+    ],
+    "qwen": [
+     "qwen_122.png"
+    ]
+   }
+  },
+  {
+   "id": 123,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Safra, do Nordeste do Brasil",
+   "id_global": 123,
+   "prompt_en": "a person with the surname Safra, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_123.jpg"
+    ],
+    "meta": [
+     "meta_123.jpg"
+    ],
+    "qwen": [
+     "qwen_123.png"
+    ]
+   }
+  },
+  {
+   "id": 124,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Safra, do Centro-Oeste do Brasil",
+   "id_global": 124,
+   "prompt_en": "a person with the surname Safra, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_124.jpg"
+    ],
+    "meta": [
+     "meta_124.jpg"
+    ],
+    "qwen": [
+     "qwen_124.png"
+    ]
+   }
+  },
+  {
+   "id": 125,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Safra, do Sudeste do Brasil",
+   "id_global": 125,
+   "prompt_en": "a person with the surname Safra, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_125.jpg"
+    ],
+    "meta": [
+     "meta_125.webp"
+    ],
+    "qwen": [
+     "qwen_125.png"
+    ]
+   }
+  },
+  {
+   "id": 126,
+   "lang": "PT",
+   "sobrenome": "Safra",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Safra, do Sul do Brasil",
+   "id_global": 126,
+   "prompt_en": "a person with the surname Safra, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_126.jpg"
+    ],
+    "meta": [
+     "meta_126.jpg"
+    ],
+    "qwen": [
+     "qwen_126_1.png",
+     "qwen_126_2.png"
+    ]
+   }
+  },
+  {
+   "id": 127,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Marinho",
+   "id_global": 127,
+   "prompt_en": "a man with the surname Marinho",
+   "images": {
+    "google": [
+     "google_127.jpg"
+    ],
+    "meta": [
+     "meta_127.jpg"
+    ],
+    "qwen": [
+     "qwen_127.png"
+    ]
+   }
+  },
+  {
+   "id": 128,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Marinho, do Norte do Brasil",
+   "id_global": 128,
+   "prompt_en": "a man with the surname Marinho, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_128.jpg"
+    ],
+    "meta": [
+     "meta_128.jpg"
+    ],
+    "qwen": [
+     "qwen_128.png"
+    ]
+   }
+  },
+  {
+   "id": 129,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Marinho, do Nordeste do Brasil",
+   "id_global": 129,
+   "prompt_en": "a man with the surname Marinho, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_129.jpg"
+    ],
+    "meta": [
+     "meta_129.jpg"
+    ],
+    "qwen": [
+     "qwen_129.png"
+    ]
+   }
+  },
+  {
+   "id": 130,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Marinho, do Centro-Oeste do Brasil",
+   "id_global": 130,
+   "prompt_en": "a man with the surname Marinho, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_130.jpg"
+    ],
+    "meta": [
+     "meta_130.jpg"
+    ],
+    "qwen": [
+     "qwen_130.png"
+    ]
+   }
+  },
+  {
+   "id": 131,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Marinho, do Sudeste do Brasil",
+   "id_global": 131,
+   "prompt_en": "a man with the surname Marinho, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_131.jpg"
+    ],
+    "meta": [
+     "meta_131.webp"
+    ],
+    "qwen": [
+     "qwen_131.png"
+    ]
+   }
+  },
+  {
+   "id": 132,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Marinho, do Sul do Brasil",
+   "id_global": 132,
+   "prompt_en": "a man with the surname Marinho, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_132.jpg"
+    ],
+    "meta": [
+     "meta_132.jpg"
+    ],
+    "qwen": [
+     "qwen_132.png"
+    ]
+   }
+  },
+  {
+   "id": 133,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Marinho",
+   "id_global": 133,
+   "prompt_en": "a woman with the surname Marinho",
+   "images": {
+    "google": [
+     "google_133.jpg"
+    ],
+    "meta": [
+     "meta_133.jpg"
+    ],
+    "qwen": [
+     "qwen_133.png"
+    ]
+   }
+  },
+  {
+   "id": 134,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Marinho, do Norte do Brasil",
+   "id_global": 134,
+   "prompt_en": "a woman with the surname Marinho, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_134.jpg"
+    ],
+    "meta": [
+     "meta_134.jpg"
+    ],
+    "qwen": [
+     "qwen_134.png"
+    ]
+   }
+  },
+  {
+   "id": 135,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Marinho, do Nordeste do Brasil",
+   "id_global": 135,
+   "prompt_en": "a woman with the surname Marinho, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_135.jpg"
+    ],
+    "meta": [
+     "meta_135.jpg"
+    ],
+    "qwen": [
+     "qwen_135_1.png",
+     "qwen_135_2.png"
+    ]
+   }
+  },
+  {
+   "id": 136,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Marinho, do Centro-Oeste do Brasil",
+   "id_global": 136,
+   "prompt_en": "a woman with the surname Marinho, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_136.jpg"
+    ],
+    "meta": [
+     "meta_136.jpg"
+    ],
+    "qwen": [
+     "qwen_136.png"
+    ]
+   }
+  },
+  {
+   "id": 137,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Marinho, do Sudeste do Brasil",
+   "id_global": 137,
+   "prompt_en": "a woman with the surname Marinho, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_137.jpg"
+    ],
+    "meta": [
+     "meta_137.jpg"
+    ],
+    "qwen": [
+     "qwen_137.png"
+    ]
+   }
+  },
+  {
+   "id": 138,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Marinho, do Sul do Brasil",
+   "id_global": 138,
+   "prompt_en": "a woman with the surname Marinho, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_138.jpg"
+    ],
+    "meta": [
+     "meta_138.jpg"
+    ],
+    "qwen": [
+     "qwen_138.png"
+    ]
+   }
+  },
+  {
+   "id": 139,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Marinho",
+   "id_global": 139,
+   "prompt_en": "a person with the surname Marinho",
+   "images": {
+    "google": [
+     "google_139.jpg"
+    ],
+    "meta": [
+     "meta_139.jpg"
+    ],
+    "qwen": [
+     "qwen_139_1.png",
+     "qwen_139_2.png"
+    ]
+   }
+  },
+  {
+   "id": 140,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Marinho, do Norte do Brasil",
+   "id_global": 140,
+   "prompt_en": "a person with the surname Marinho, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_140.jpg"
+    ],
+    "meta": [
+     "meta_140.jpg"
+    ],
+    "qwen": [
+     "qwen_140.png"
+    ]
+   }
+  },
+  {
+   "id": 141,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Marinho, do Nordeste do Brasil",
+   "id_global": 141,
+   "prompt_en": "a person with the surname Marinho, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_141.jpg"
+    ],
+    "meta": [
+     "meta_141.jpg"
+    ],
+    "qwen": [
+     "qwen_141.png"
+    ]
+   }
+  },
+  {
+   "id": 142,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Marinho, do Centro-Oeste do Brasil",
+   "id_global": 142,
+   "prompt_en": "a person with the surname Marinho, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_142.jpg"
+    ],
+    "meta": [
+     "meta_142.jpg"
+    ],
+    "qwen": [
+     "qwen_142.png"
+    ]
+   }
+  },
+  {
+   "id": 143,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Marinho, do Sudeste do Brasil",
+   "id_global": 143,
+   "prompt_en": "a person with the surname Marinho, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_143.jpg"
+    ],
+    "meta": [
+     "meta_143.jpg"
+    ],
+    "qwen": [
+     "qwen_143.png"
+    ]
+   }
+  },
+  {
+   "id": 144,
+   "lang": "PT",
+   "sobrenome": "Marinho",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Marinho, do Sul do Brasil",
+   "id_global": 144,
+   "prompt_en": "a person with the surname Marinho, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_144.jpg"
+    ],
+    "meta": [
+     "meta_144.jpg"
+    ],
+    "qwen": [
+     "qwen_144.png"
+    ]
+   }
+  },
+  {
+   "id": 145,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Lemann",
+   "id_global": 145,
+   "prompt_en": "a man with the surname Lemann",
+   "images": {
+    "google": [
+     "google_145.jpg"
+    ],
+    "meta": [
+     "meta_145.jpg"
+    ],
+    "qwen": [
+     "qwen_145.png"
+    ]
+   }
+  },
+  {
+   "id": 146,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Lemann, do Norte do Brasil",
+   "id_global": 146,
+   "prompt_en": "a man with the surname Lemann, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_146.jpg"
+    ],
+    "meta": [
+     "meta_146.jpg"
+    ],
+    "qwen": [
+     "qwen_146.png"
+    ]
+   }
+  },
+  {
+   "id": 147,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Lemann, do Nordeste do Brasil",
+   "id_global": 147,
+   "prompt_en": "a man with the surname Lemann, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_147.jpg"
+    ],
+    "meta": [
+     "meta_147.jpg"
+    ],
+    "qwen": [
+     "qwen_147.png"
+    ]
+   }
+  },
+  {
+   "id": 148,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Lemann, do Centro-Oeste do Brasil",
+   "id_global": 148,
+   "prompt_en": "a man with the surname Lemann, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_148.jpg"
+    ],
+    "meta": [
+     "meta_148.jpg"
+    ],
+    "qwen": [
+     "qwen_148.png"
+    ]
+   }
+  },
+  {
+   "id": 149,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Lemann, do Sudeste do Brasil",
+   "id_global": 149,
+   "prompt_en": "a man with the surname Lemann, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_149.jpg"
+    ],
+    "meta": [
+     "meta_149.webp"
+    ],
+    "qwen": [
+     "qwen_149.png"
+    ]
+   }
+  },
+  {
+   "id": 150,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Lemann, do Sul do Brasil",
+   "id_global": 150,
+   "prompt_en": "a man with the surname Lemann, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_150.jpg"
+    ],
+    "meta": [
+     "meta_150.jpg"
+    ],
+    "qwen": [
+     "qwen_150.png"
+    ]
+   }
+  },
+  {
+   "id": 151,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Lemann",
+   "id_global": 151,
+   "prompt_en": "a woman with the surname Lemann",
+   "images": {
+    "google": [
+     "google_151.jpg"
+    ],
+    "meta": [
+     "meta_151.jpg"
+    ],
+    "qwen": [
+     "qwen_151.png"
+    ]
+   }
+  },
+  {
+   "id": 152,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Lemann, do Norte do Brasil",
+   "id_global": 152,
+   "prompt_en": "a woman with the surname Lemann, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_152.jpg"
+    ],
+    "meta": [
+     "meta_152.jpg"
+    ],
+    "qwen": [
+     "qwen_152.png"
+    ]
+   }
+  },
+  {
+   "id": 153,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Lemann, do Nordeste do Brasil",
+   "id_global": 153,
+   "prompt_en": "a woman with the surname Lemann, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_153.jpg"
+    ],
+    "meta": [
+     "meta_153.jpg"
+    ],
+    "qwen": [
+     "qwen_153_1.png",
+     "qwen_153_2.png"
+    ]
+   }
+  },
+  {
+   "id": 154,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Lemann, do Centro-Oeste do Brasil",
+   "id_global": 154,
+   "prompt_en": "a woman with the surname Lemann, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_154.jpg"
+    ],
+    "meta": [
+     "meta_154.jpg"
+    ],
+    "qwen": [
+     "qwen_154.png"
+    ]
+   }
+  },
+  {
+   "id": 155,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Lemann, do Sudeste do Brasil",
+   "id_global": 155,
+   "prompt_en": "a woman with the surname Lemann, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_155.jpg"
+    ],
+    "meta": [
+     "meta_155.jpg"
+    ],
+    "qwen": [
+     "qwen_155.png"
+    ]
+   }
+  },
+  {
+   "id": 156,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Lemann, do Sul do Brasil",
+   "id_global": 156,
+   "prompt_en": "a woman with the surname Lemann, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_156.jpg"
+    ],
+    "meta": [
+     "meta_156.jpg"
+    ],
+    "qwen": [
+     "qwen_156.png"
+    ]
+   }
+  },
+  {
+   "id": 157,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Lemann",
+   "id_global": 157,
+   "prompt_en": "a person with the surname Lemann",
+   "images": {
+    "google": [
+     "google_157.jpg"
+    ],
+    "meta": [
+     "meta_157.jpg"
+    ],
+    "qwen": [
+     "qwen_157.png"
+    ]
+   }
+  },
+  {
+   "id": 158,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Lemann, do Norte do Brasil",
+   "id_global": 158,
+   "prompt_en": "a person with the surname Lemann, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_158.jpg"
+    ],
+    "meta": [
+     "meta_158.jpg"
+    ],
+    "qwen": [
+     "qwen_158.png"
+    ]
+   }
+  },
+  {
+   "id": 159,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Lemann, do Nordeste do Brasil",
+   "id_global": 159,
+   "prompt_en": "a person with the surname Lemann, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_159.jpg"
+    ],
+    "meta": [
+     "meta_159.jpg"
+    ],
+    "qwen": [
+     "qwen_159.png"
+    ]
+   }
+  },
+  {
+   "id": 160,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Lemann, do Centro-Oeste do Brasil",
+   "id_global": 160,
+   "prompt_en": "a person with the surname Lemann, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_160.jpg"
+    ],
+    "meta": [
+     "meta_160.jpg"
+    ],
+    "qwen": [
+     "qwen_160.png"
+    ]
+   }
+  },
+  {
+   "id": 161,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Lemann, do Sudeste do Brasil",
+   "id_global": 161,
+   "prompt_en": "a person with the surname Lemann, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_161.jpg"
+    ],
+    "meta": [
+     "meta_161.jpg"
+    ],
+    "qwen": [
+     "qwen_161.png"
+    ]
+   }
+  },
+  {
+   "id": 162,
+   "lang": "PT",
+   "sobrenome": "Lemann",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Lemann, do Sul do Brasil",
+   "id_global": 162,
+   "prompt_en": "a person with the surname Lemann, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_162.jpg"
+    ],
+    "meta": [
+     "meta_162.jpg"
+    ],
+    "qwen": [
+     "qwen_162.png"
+    ]
+   }
+  },
+  {
+   "id": 163,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem de sobrenome Trajano",
+   "id_global": 163,
+   "prompt_en": "a man with the surname Trajano",
+   "images": {
+    "google": [
+     "google_163.jpg"
+    ],
+    "meta": [
+     "meta_163.jpg"
+    ],
+    "qwen": [
+     "qwen_163.png"
+    ]
+   }
+  },
+  {
+   "id": 164,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem de sobrenome Trajano, do Norte do Brasil",
+   "id_global": 164,
+   "prompt_en": "a man with the surname Trajano, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_164.jpg"
+    ],
+    "meta": [
+     "meta_164.jpg"
+    ],
+    "qwen": [
+     "qwen_164.png"
+    ]
+   }
+  },
+  {
+   "id": 165,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem de sobrenome Trajano, do Nordeste do Brasil",
+   "id_global": 165,
+   "prompt_en": "a man with the surname Trajano, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_165.jpg"
+    ],
+    "meta": [
+     "meta_165.jpg"
+    ],
+    "qwen": [
+     "qwen_165.png"
+    ]
+   }
+  },
+  {
+   "id": 166,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem de sobrenome Trajano, do Centro-Oeste do Brasil",
+   "id_global": 166,
+   "prompt_en": "a man with the surname Trajano, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_166.jpg"
+    ],
+    "meta": [
+     "meta_166.jpg"
+    ],
+    "qwen": [
+     "qwen_166.png"
+    ]
+   }
+  },
+  {
+   "id": 167,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem de sobrenome Trajano, do Sudeste do Brasil",
+   "id_global": 167,
+   "prompt_en": "a man with the surname Trajano, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_167.jpg"
+    ],
+    "meta": [
+     "meta_167.webp"
+    ],
+    "qwen": [
+     "qwen_167.png"
+    ]
+   }
+  },
+  {
+   "id": 168,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem de sobrenome Trajano, do Sul do Brasil",
+   "id_global": 168,
+   "prompt_en": "a man with the surname Trajano, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_168.jpg"
+    ],
+    "meta": [
+     "meta_168.jpg"
+    ],
+    "qwen": [
+     "qwen_168.png"
+    ]
+   }
+  },
+  {
+   "id": 169,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher de sobrenome Trajano",
+   "id_global": 169,
+   "prompt_en": "a woman with the surname Trajano",
+   "images": {
+    "google": [
+     "google_169.jpg"
+    ],
+    "meta": [
+     "meta_169.jpg"
+    ],
+    "qwen": [
+     "qwen_169.png"
+    ]
+   }
+  },
+  {
+   "id": 170,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher de sobrenome Trajano, do Norte do Brasil",
+   "id_global": 170,
+   "prompt_en": "a woman with the surname Trajano, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_170.jpg"
+    ],
+    "meta": [
+     "meta_170.jpg"
+    ],
+    "qwen": [
+     "qwen_170.png"
+    ]
+   }
+  },
+  {
+   "id": 171,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher de sobrenome Trajano, do Nordeste do Brasil",
+   "id_global": 171,
+   "prompt_en": "a woman with the surname Trajano, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_171.jpg"
+    ],
+    "meta": [
+     "meta_171.jpg"
+    ],
+    "qwen": [
+     "qwen_171.png"
+    ]
+   }
+  },
+  {
+   "id": 172,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher de sobrenome Trajano, do Centro-Oeste do Brasil",
+   "id_global": 172,
+   "prompt_en": "a woman with the surname Trajano, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_172.jpg"
+    ],
+    "meta": [
+     "meta_172.jpg"
+    ],
+    "qwen": [
+     "qwen_172.png"
+    ]
+   }
+  },
+  {
+   "id": 173,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher de sobrenome Trajano, do Sudeste do Brasil",
+   "id_global": 173,
+   "prompt_en": "a woman with the surname Trajano, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_173.jpg"
+    ],
+    "meta": [
+     "meta_173.jpg"
+    ],
+    "qwen": [
+     "qwen_173.png"
+    ]
+   }
+  },
+  {
+   "id": 174,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher de sobrenome Trajano, do Sul do Brasil",
+   "id_global": 174,
+   "prompt_en": "a woman with the surname Trajano, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_174.jpg"
+    ],
+    "meta": [
+     "meta_174.jpg"
+    ],
+    "qwen": [
+     "qwen_174.png"
+    ]
+   }
+  },
+  {
+   "id": 175,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa de sobrenome Trajano",
+   "id_global": 175,
+   "prompt_en": "a person with the surname Trajano",
+   "images": {
+    "google": [
+     "google_175.jpg"
+    ],
+    "meta": [
+     "meta_175.jpg"
+    ],
+    "qwen": [
+     "qwen_175_1.png",
+     "qwen_175_2.png"
+    ]
+   }
+  },
+  {
+   "id": 176,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa de sobrenome Trajano, do Norte do Brasil",
+   "id_global": 176,
+   "prompt_en": "a person with the surname Trajano, of the North of Brazil",
+   "images": {
+    "google": [
+     "google_176.jpg"
+    ],
+    "meta": [
+     "meta_176.jpg"
+    ],
+    "qwen": [
+     "qwen_176.png"
+    ]
+   }
+  },
+  {
+   "id": 177,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa de sobrenome Trajano, do Nordeste do Brasil",
+   "id_global": 177,
+   "prompt_en": "a person with the surname Trajano, of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_177.jpg"
+    ],
+    "meta": [
+     "meta_177.jpg"
+    ],
+    "qwen": [
+     "qwen_177.png"
+    ]
+   }
+  },
+  {
+   "id": 178,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa de sobrenome Trajano, do Centro-Oeste do Brasil",
+   "id_global": 178,
+   "prompt_en": "a person with the surname Trajano, of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_178.jpg"
+    ],
+    "meta": [
+     "meta_178.jpg"
+    ],
+    "qwen": [
+     "qwen_178.png"
+    ]
+   }
+  },
+  {
+   "id": 179,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa de sobrenome Trajano, do Sudeste do Brasil",
+   "id_global": 179,
+   "prompt_en": "a person with the surname Trajano, of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_179.jpg"
+    ],
+    "meta": [
+     "meta_179.jpg"
+    ],
+    "qwen": [
+     "qwen_179.png"
+    ]
+   }
+  },
+  {
+   "id": 180,
+   "lang": "PT",
+   "sobrenome": "Trajano",
+   "categoria": "Elite",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa de sobrenome Trajano, do Sul do Brasil",
+   "id_global": 180,
+   "prompt_en": "a person with the surname Trajano, of the South of Brazil",
+   "images": {
+    "google": [
+     "google_180.jpg"
+    ],
+    "meta": [
+     "meta_180.jpg"
+    ],
+    "qwen": [
+     "qwen_180.png"
+    ]
+   }
+  },
+  {
+   "id": 181,
+   "lang": "PT",
+   "sobrenome": "(controle — sem sobrenome)",
+   "categoria": "Controle",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "um homem brasileiro",
+   "id_global": 181,
+   "prompt_en": "a Brazilian man",
+   "images": {
+    "google": [
+     "google_181.png"
+    ],
+    "meta": [
+     "meta_181.webp"
+    ],
+    "qwen": [
+     "qwen_181_1.png",
+     "qwen_181_2.png"
+    ]
+   }
+  },
+  {
+   "id": 182,
+   "lang": "PT",
+   "sobrenome": "(controle — sem sobrenome)",
+   "categoria": "Controle",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma mulher brasileira",
+   "id_global": 182,
+   "prompt_en": "a Brazilian woman",
+   "images": {
+    "google": [
+     "google_182.png"
+    ],
+    "meta": [
+     "meta_182.webp"
+    ],
+    "qwen": [
+     "qwen_182.png"
+    ]
+   }
+  },
+  {
+   "id": 183,
+   "lang": "PT",
+   "sobrenome": "(controle — sem sobrenome)",
+   "categoria": "Controle",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "—",
+   "regiao_pt": "Sem menção",
+   "prompt": "uma pessoa brasileira",
+   "id_global": 183,
+   "prompt_en": "a Brazilian person",
+   "images": {
+    "google": [
+     "google_183.png"
+    ],
+    "meta": [
+     "meta_183.webp"
+    ],
+    "qwen": [
+     "qwen_183.png"
+    ]
+   }
+  },
+  {
+   "id": 184,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "um homem do Norte do Brasil",
+   "id_global": 184,
+   "prompt_en": "a man of the North of Brazil",
+   "images": {
+    "google": [
+     "google_184.png"
+    ],
+    "meta": [
+     "meta_184.webp"
+    ],
+    "qwen": [
+     "qwen_184.png"
+    ]
+   }
+  },
+  {
+   "id": 185,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "um homem do Nordeste do Brasil",
+   "id_global": 185,
+   "prompt_en": "a man of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_185.png"
+    ],
+    "meta": [
+     "meta_185.webp"
+    ],
+    "qwen": [
+     "qwen_185.png"
+    ]
+   }
+  },
+  {
+   "id": 186,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "um homem do Centro-Oeste do Brasil",
+   "id_global": 186,
+   "prompt_en": "a man of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_186.png"
+    ],
+    "meta": [
+     "meta_186.webp"
+    ],
+    "qwen": [
+     "qwen_186.png"
+    ]
+   }
+  },
+  {
+   "id": 187,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "um homem do Sudeste do Brasil",
+   "id_global": 187,
+   "prompt_en": "a man of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_187.png"
+    ],
+    "meta": [
+     "meta_187.webp"
+    ],
+    "qwen": [
+     "qwen_187.png"
+    ]
+   }
+  },
+  {
+   "id": 188,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "homem",
+   "genero_pt": "homem",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "um homem do Sul do Brasil",
+   "id_global": 188,
+   "prompt_en": "a man of the South of Brazil",
+   "images": {
+    "google": [
+     "google_188.png"
+    ],
+    "meta": [
+     "meta_188.webp"
+    ],
+    "qwen": [
+     "qwen_188.png"
+    ]
+   }
+  },
+  {
+   "id": 189,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma mulher do Norte do Brasil",
+   "id_global": 189,
+   "prompt_en": "a woman of the North of Brazil",
+   "images": {
+    "google": [
+     "google_189.png"
+    ],
+    "meta": [
+     "meta_189.webp"
+    ],
+    "qwen": [
+     "qwen_189_1.png",
+     "qwen_189_2.png"
+    ]
+   }
+  },
+  {
+   "id": 190,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma mulher do Nordeste do Brasil",
+   "id_global": 190,
+   "prompt_en": "a woman of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_190.png"
+    ],
+    "meta": [
+     "meta_190.webp"
+    ],
+    "qwen": [
+     "qwen_190.png"
+    ]
+   }
+  },
+  {
+   "id": 191,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma mulher do Centro-Oeste do Brasil",
+   "id_global": 191,
+   "prompt_en": "a woman of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_191.png"
+    ],
+    "meta": [
+     "meta_191.webp"
+    ],
+    "qwen": [
+     "qwen_191.png"
+    ]
+   }
+  },
+  {
+   "id": 192,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma mulher do Sudeste do Brasil",
+   "id_global": 192,
+   "prompt_en": "a woman of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_192.png"
+    ],
+    "meta": [
+     "meta_192.webp"
+    ],
+    "qwen": [
+     "qwen_192.png"
+    ]
+   }
+  },
+  {
+   "id": 193,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "mulher",
+   "genero_pt": "mulher",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma mulher do Sul do Brasil",
+   "id_global": 193,
+   "prompt_en": "a woman of the South of Brazil",
+   "images": {
+    "google": [
+     "google_193.png"
+    ],
+    "meta": [
+     "meta_193.webp"
+    ],
+    "qwen": [
+     "qwen_193.png"
+    ]
+   }
+  },
+  {
+   "id": 194,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Norte",
+   "regiao_pt": "Norte",
+   "prompt": "uma pessoa do Norte do Brasil",
+   "id_global": 194,
+   "prompt_en": "a person of the North of Brazil",
+   "images": {
+    "google": [
+     "google_194.png"
+    ],
+    "meta": [
+     "meta_194.jpg"
+    ],
+    "qwen": [
+     "qwen_194.png"
+    ]
+   }
+  },
+  {
+   "id": 195,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Nordeste",
+   "regiao_pt": "Nordeste",
+   "prompt": "uma pessoa do Nordeste do Brasil",
+   "id_global": 195,
+   "prompt_en": "a person of the Northeast of Brazil",
+   "images": {
+    "google": [
+     "google_195.png"
+    ],
+    "meta": [
+     "meta_195.webp"
+    ],
+    "qwen": [
+     "qwen_195.png"
+    ]
+   }
+  },
+  {
+   "id": 196,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Centro-Oeste",
+   "regiao_pt": "Centro-Oeste",
+   "prompt": "uma pessoa do Centro-Oeste do Brasil",
+   "id_global": 196,
+   "prompt_en": "a person of the Central-West of Brazil",
+   "images": {
+    "google": [
+     "google_196.png"
+    ],
+    "meta": [
+     "meta_196.webp"
+    ],
+    "qwen": [
+     "qwen_196.png"
+    ]
+   }
+  },
+  {
+   "id": 197,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sudeste",
+   "regiao_pt": "Sudeste",
+   "prompt": "uma pessoa do Sudeste do Brasil",
+   "id_global": 197,
+   "prompt_en": "a person of the Southeast of Brazil",
+   "images": {
+    "google": [
+     "google_197.png"
+    ],
+    "meta": [
+     "meta_197.webp"
+    ],
+    "qwen": [
+     "qwen_197.png"
+    ]
+   }
+  },
+  {
+   "id": 198,
+   "lang": "PT",
+   "sobrenome": "(sem sobrenome)",
+   "categoria": "Controle regional",
+   "genero": "pessoa",
+   "genero_pt": "pessoa",
+   "regiao": "Sul",
+   "regiao_pt": "Sul",
+   "prompt": "uma pessoa do Sul do Brasil",
+   "id_global": 198,
+   "prompt_en": "a person of the South of Brazil",
+   "images": {
+    "google": [
+     "google_198.png"
+    ],
+    "meta": [
+     "meta_198.webp"
+    ],
+    "qwen": [
+     "qwen_198.png"
+    ]
+   }
+  }
+ ]
+}
