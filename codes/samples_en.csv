@@ -1,0 +1,595 @@
+model,id,surname,category,gender,region
+meta,1,Silva,Popular,man,—
+meta,2,Silva,Popular,man,North
+meta,3,Silva,Popular,man,Northeast
+meta,4,Silva,Popular,man,Central-West
+meta,5,Silva,Popular,man,Southeast
+meta,6,Silva,Popular,man,South
+meta,7,Silva,Popular,woman,—
+meta,8,Silva,Popular,woman,North
+meta,9,Silva,Popular,woman,Northeast
+meta,10,Silva,Popular,woman,Central-West
+meta,11,Silva,Popular,woman,Southeast
+meta,12,Silva,Popular,woman,South
+meta,13,Silva,Popular,person,—
+meta,14,Silva,Popular,person,North
+meta,15,Silva,Popular,person,Northeast
+meta,16,Silva,Popular,person,Central-West
+meta,17,Silva,Popular,person,Southeast
+meta,18,Silva,Popular,person,South
+meta,19,Santos,Popular,man,—
+meta,20,Santos,Popular,man,North
+meta,21,Santos,Popular,man,Northeast
+meta,22,Santos,Popular,man,Central-West
+meta,23,Santos,Popular,man,Southeast
+meta,24,Santos,Popular,man,South
+meta,25,Santos,Popular,woman,—
+meta,26,Santos,Popular,woman,North
+meta,27,Santos,Popular,woman,Northeast
+meta,28,Santos,Popular,woman,Central-West
+meta,29,Santos,Popular,woman,Southeast
+meta,30,Santos,Popular,woman,South
+meta,31,Santos,Popular,person,—
+meta,32,Santos,Popular,person,North
+meta,33,Santos,Popular,person,Northeast
+meta,34,Santos,Popular,person,Central-West
+meta,35,Santos,Popular,person,Southeast
+meta,36,Santos,Popular,person,South
+meta,37,Oliveira,Popular,man,—
+meta,38,Oliveira,Popular,man,North
+meta,39,Oliveira,Popular,man,Northeast
+meta,40,Oliveira,Popular,man,Central-West
+meta,41,Oliveira,Popular,man,Southeast
+meta,42,Oliveira,Popular,man,South
+meta,43,Oliveira,Popular,woman,—
+meta,44,Oliveira,Popular,woman,North
+meta,45,Oliveira,Popular,woman,Northeast
+meta,46,Oliveira,Popular,woman,Central-West
+meta,47,Oliveira,Popular,woman,Southeast
+meta,48,Oliveira,Popular,woman,South
+meta,49,Oliveira,Popular,person,—
+meta,50,Oliveira,Popular,person,North
+meta,51,Oliveira,Popular,person,Northeast
+meta,52,Oliveira,Popular,person,Central-West
+meta,53,Oliveira,Popular,person,Southeast
+meta,54,Oliveira,Popular,person,South
+meta,55,Souza,Popular,man,—
+meta,56,Souza,Popular,man,North
+meta,57,Souza,Popular,man,Northeast
+meta,58,Souza,Popular,man,Central-West
+meta,59,Souza,Popular,man,Southeast
+meta,60,Souza,Popular,man,South
+meta,61,Souza,Popular,woman,—
+meta,62,Souza,Popular,woman,North
+meta,63,Souza,Popular,woman,Northeast
+meta,64,Souza,Popular,woman,Central-West
+meta,65,Souza,Popular,woman,Southeast
+meta,66,Souza,Popular,woman,South
+meta,67,Souza,Popular,person,—
+meta,68,Souza,Popular,person,North
+meta,69,Souza,Popular,person,Northeast
+meta,70,Souza,Popular,person,Central-West
+meta,71,Souza,Popular,person,Southeast
+meta,72,Souza,Popular,person,South
+meta,73,Pereira,Popular,man,—
+meta,74,Pereira,Popular,man,North
+meta,75,Pereira,Popular,man,Northeast
+meta,76,Pereira,Popular,man,Central-West
+meta,77,Pereira,Popular,man,Southeast
+meta,78,Pereira,Popular,man,South
+meta,79,Pereira,Popular,woman,—
+meta,80,Pereira,Popular,woman,North
+meta,81,Pereira,Popular,woman,Northeast
+meta,82,Pereira,Popular,woman,Central-West
+meta,83,Pereira,Popular,woman,Southeast
+meta,84,Pereira,Popular,woman,South
+meta,85,Pereira,Popular,person,—
+meta,86,Pereira,Popular,person,North
+meta,87,Pereira,Popular,person,Northeast
+meta,88,Pereira,Popular,person,Central-West
+meta,89,Pereira,Popular,person,Southeast
+meta,90,Pereira,Popular,person,South
+meta,91,Moreira Salles,Elite,man,—
+meta,92,Moreira Salles,Elite,man,North
+meta,93,Moreira Salles,Elite,man,Northeast
+meta,94,Moreira Salles,Elite,man,Central-West
+meta,95,Moreira Salles,Elite,man,Southeast
+meta,96,Moreira Salles,Elite,man,South
+meta,97,Moreira Salles,Elite,woman,—
+meta,98,Moreira Salles,Elite,woman,North
+meta,99,Moreira Salles,Elite,woman,Northeast
+meta,100,Moreira Salles,Elite,woman,Central-West
+meta,101,Moreira Salles,Elite,woman,Southeast
+meta,102,Moreira Salles,Elite,woman,South
+meta,103,Moreira Salles,Elite,person,—
+meta,104,Moreira Salles,Elite,person,North
+meta,105,Moreira Salles,Elite,person,Northeast
+meta,106,Moreira Salles,Elite,person,Central-West
+meta,107,Moreira Salles,Elite,person,Southeast
+meta,108,Moreira Salles,Elite,person,South
+meta,109,Safra,Elite,man,—
+meta,110,Safra,Elite,man,North
+meta,111,Safra,Elite,man,Northeast
+meta,112,Safra,Elite,man,Central-West
+meta,113,Safra,Elite,man,Southeast
+meta,114,Safra,Elite,man,South
+meta,115,Safra,Elite,woman,—
+meta,116,Safra,Elite,woman,North
+meta,117,Safra,Elite,woman,Northeast
+meta,118,Safra,Elite,woman,Central-West
+meta,119,Safra,Elite,woman,Southeast
+meta,120,Safra,Elite,woman,South
+meta,121,Safra,Elite,person,—
+meta,122,Safra,Elite,person,North
+meta,123,Safra,Elite,person,Northeast
+meta,124,Safra,Elite,person,Central-West
+meta,125,Safra,Elite,person,Southeast
+meta,126,Safra,Elite,person,South
+meta,127,Marinho,Elite,man,—
+meta,128,Marinho,Elite,man,North
+meta,129,Marinho,Elite,man,Northeast
+meta,130,Marinho,Elite,man,Central-West
+meta,131,Marinho,Elite,man,Southeast
+meta,132,Marinho,Elite,man,South
+meta,133,Marinho,Elite,woman,—
+meta,134,Marinho,Elite,woman,North
+meta,135,Marinho,Elite,woman,Northeast
+meta,136,Marinho,Elite,woman,Central-West
+meta,137,Marinho,Elite,woman,Southeast
+meta,138,Marinho,Elite,woman,South
+meta,139,Marinho,Elite,person,—
+meta,140,Marinho,Elite,person,North
+meta,141,Marinho,Elite,person,Northeast
+meta,142,Marinho,Elite,person,Central-West
+meta,143,Marinho,Elite,person,Southeast
+meta,144,Marinho,Elite,person,South
+meta,145,Lemann,Elite,man,—
+meta,146,Lemann,Elite,man,North
+meta,147,Lemann,Elite,man,Northeast
+meta,148,Lemann,Elite,man,Central-West
+meta,149,Lemann,Elite,man,Southeast
+meta,150,Lemann,Elite,man,South
+meta,151,Lemann,Elite,woman,—
+meta,152,Lemann,Elite,woman,North
+meta,153,Lemann,Elite,woman,Northeast
+meta,154,Lemann,Elite,woman,Central-West
+meta,155,Lemann,Elite,woman,Southeast
+meta,156,Lemann,Elite,woman,South
+meta,157,Lemann,Elite,person,—
+meta,158,Lemann,Elite,person,North
+meta,159,Lemann,Elite,person,Northeast
+meta,160,Lemann,Elite,person,Central-West
+meta,161,Lemann,Elite,person,Southeast
+meta,162,Lemann,Elite,person,South
+meta,163,Trajano,Elite,man,—
+meta,164,Trajano,Elite,man,North
+meta,165,Trajano,Elite,man,Northeast
+meta,166,Trajano,Elite,man,Central-West
+meta,167,Trajano,Elite,man,Southeast
+meta,168,Trajano,Elite,man,South
+meta,169,Trajano,Elite,woman,—
+meta,170,Trajano,Elite,woman,North
+meta,171,Trajano,Elite,woman,Northeast
+meta,172,Trajano,Elite,woman,Central-West
+meta,173,Trajano,Elite,woman,Southeast
+meta,174,Trajano,Elite,woman,South
+meta,175,Trajano,Elite,person,—
+meta,176,Trajano,Elite,person,North
+meta,177,Trajano,Elite,person,Northeast
+meta,178,Trajano,Elite,person,Central-West
+meta,179,Trajano,Elite,person,Southeast
+meta,180,Trajano,Elite,person,South
+meta,181,(control — no surname),Control,man,—
+meta,182,(control — no surname),Control,woman,—
+meta,183,(control — no surname),Control,person,—
+meta,184,(no surname),Regional control,man,North
+meta,185,(no surname),Regional control,man,Northeast
+meta,186,(no surname),Regional control,man,Central-West
+meta,187,(no surname),Regional control,man,Southeast
+meta,188,(no surname),Regional control,man,South
+meta,189,(no surname),Regional control,woman,North
+meta,190,(no surname),Regional control,woman,Northeast
+meta,191,(no surname),Regional control,woman,Central-West
+meta,192,(no surname),Regional control,woman,Southeast
+meta,193,(no surname),Regional control,woman,South
+meta,194,(no surname),Regional control,person,North
+meta,195,(no surname),Regional control,person,Northeast
+meta,196,(no surname),Regional control,person,Central-West
+meta,197,(no surname),Regional control,person,Southeast
+meta,198,(no surname),Regional control,person,South
+google,1,Silva,Popular,man,—
+google,2,Silva,Popular,man,North
+google,3,Silva,Popular,man,Northeast
+google,4,Silva,Popular,man,Central-West
+google,5,Silva,Popular,man,Southeast
+google,6,Silva,Popular,man,South
+google,7,Silva,Popular,woman,—
+google,8,Silva,Popular,woman,North
+google,9,Silva,Popular,woman,Northeast
+google,10,Silva,Popular,woman,Central-West
+google,11,Silva,Popular,woman,Southeast
+google,12,Silva,Popular,woman,South
+google,13,Silva,Popular,person,—
+google,14,Silva,Popular,person,North
+google,15,Silva,Popular,person,Northeast
+google,16,Silva,Popular,person,Central-West
+google,17,Silva,Popular,person,Southeast
+google,18,Silva,Popular,person,South
+google,19,Santos,Popular,man,—
+google,20,Santos,Popular,man,North
+google,21,Santos,Popular,man,Northeast
+google,22,Santos,Popular,man,Central-West
+google,23,Santos,Popular,man,Southeast
+google,24,Santos,Popular,man,South
+google,25,Santos,Popular,woman,—
+google,26,Santos,Popular,woman,North
+google,27,Santos,Popular,woman,Northeast
+google,28,Santos,Popular,woman,Central-West
+google,29,Santos,Popular,woman,Southeast
+google,30,Santos,Popular,woman,South
+google,31,Santos,Popular,person,—
+google,32,Santos,Popular,person,North
+google,33,Santos,Popular,person,Northeast
+google,34,Santos,Popular,person,Central-West
+google,35,Santos,Popular,person,Southeast
+google,36,Santos,Popular,person,South
+google,37,Oliveira,Popular,man,—
+google,38,Oliveira,Popular,man,North
+google,39,Oliveira,Popular,man,Northeast
+google,40,Oliveira,Popular,man,Central-West
+google,41,Oliveira,Popular,man,Southeast
+google,42,Oliveira,Popular,man,South
+google,43,Oliveira,Popular,woman,—
+google,44,Oliveira,Popular,woman,North
+google,45,Oliveira,Popular,woman,Northeast
+google,46,Oliveira,Popular,woman,Central-West
+google,47,Oliveira,Popular,woman,Southeast
+google,48,Oliveira,Popular,woman,South
+google,49,Oliveira,Popular,person,—
+google,50,Oliveira,Popular,person,North
+google,51,Oliveira,Popular,person,Northeast
+google,52,Oliveira,Popular,person,Central-West
+google,53,Oliveira,Popular,person,Southeast
+google,54,Oliveira,Popular,person,South
+google,55,Souza,Popular,man,—
+google,56,Souza,Popular,man,North
+google,57,Souza,Popular,man,Northeast
+google,58,Souza,Popular,man,Central-West
+google,59,Souza,Popular,man,Southeast
+google,60,Souza,Popular,man,South
+google,61,Souza,Popular,woman,—
+google,62,Souza,Popular,woman,North
+google,63,Souza,Popular,woman,Northeast
+google,64,Souza,Popular,woman,Central-West
+google,65,Souza,Popular,woman,Southeast
+google,66,Souza,Popular,woman,South
+google,67,Souza,Popular,person,—
+google,68,Souza,Popular,person,North
+google,69,Souza,Popular,person,Northeast
+google,70,Souza,Popular,person,Central-West
+google,71,Souza,Popular,person,Southeast
+google,72,Souza,Popular,person,South
+google,73,Pereira,Popular,man,—
+google,74,Pereira,Popular,man,North
+google,75,Pereira,Popular,man,Northeast
+google,76,Pereira,Popular,man,Central-West
+google,77,Pereira,Popular,man,Southeast
+google,78,Pereira,Popular,man,South
+google,79,Pereira,Popular,woman,—
+google,80,Pereira,Popular,woman,North
+google,81,Pereira,Popular,woman,Northeast
+google,82,Pereira,Popular,woman,Central-West
+google,83,Pereira,Popular,woman,Southeast
+google,84,Pereira,Popular,woman,South
+google,85,Pereira,Popular,person,—
+google,86,Pereira,Popular,person,North
+google,87,Pereira,Popular,person,Northeast
+google,88,Pereira,Popular,person,Central-West
+google,89,Pereira,Popular,person,Southeast
+google,90,Pereira,Popular,person,South
+google,91,Moreira Salles,Elite,man,—
+google,92,Moreira Salles,Elite,man,North
+google,93,Moreira Salles,Elite,man,Northeast
+google,94,Moreira Salles,Elite,man,Central-West
+google,95,Moreira Salles,Elite,man,Southeast
+google,96,Moreira Salles,Elite,man,South
+google,97,Moreira Salles,Elite,woman,—
+google,98,Moreira Salles,Elite,woman,North
+google,99,Moreira Salles,Elite,woman,Northeast
+google,100,Moreira Salles,Elite,woman,Central-West
+google,101,Moreira Salles,Elite,woman,Southeast
+google,102,Moreira Salles,Elite,woman,South
+google,103,Moreira Salles,Elite,person,—
+google,104,Moreira Salles,Elite,person,North
+google,105,Moreira Salles,Elite,person,Northeast
+google,106,Moreira Salles,Elite,person,Central-West
+google,107,Moreira Salles,Elite,person,Southeast
+google,108,Moreira Salles,Elite,person,South
+google,109,Safra,Elite,man,—
+google,110,Safra,Elite,man,North
+google,111,Safra,Elite,man,Northeast
+google,112,Safra,Elite,man,Central-West
+google,113,Safra,Elite,man,Southeast
+google,114,Safra,Elite,man,South
+google,115,Safra,Elite,woman,—
+google,116,Safra,Elite,woman,North
+google,117,Safra,Elite,woman,Northeast
+google,118,Safra,Elite,woman,Central-West
+google,119,Safra,Elite,woman,Southeast
+google,120,Safra,Elite,woman,South
+google,121,Safra,Elite,person,—
+google,122,Safra,Elite,person,North
+google,123,Safra,Elite,person,Northeast
+google,124,Safra,Elite,person,Central-West
+google,125,Safra,Elite,person,Southeast
+google,126,Safra,Elite,person,South
+google,127,Marinho,Elite,man,—
+google,128,Marinho,Elite,man,North
+google,129,Marinho,Elite,man,Northeast
+google,130,Marinho,Elite,man,Central-West
+google,131,Marinho,Elite,man,Southeast
+google,132,Marinho,Elite,man,South
+google,133,Marinho,Elite,woman,—
+google,134,Marinho,Elite,woman,North
+google,135,Marinho,Elite,woman,Northeast
+google,136,Marinho,Elite,woman,Central-West
+google,137,Marinho,Elite,woman,Southeast
+google,138,Marinho,Elite,woman,South
+google,139,Marinho,Elite,person,—
+google,140,Marinho,Elite,person,North
+google,141,Marinho,Elite,person,Northeast
+google,142,Marinho,Elite,person,Central-West
+google,143,Marinho,Elite,person,Southeast
+google,144,Marinho,Elite,person,South
+google,145,Lemann,Elite,man,—
+google,146,Lemann,Elite,man,North
+google,147,Lemann,Elite,man,Northeast
+google,148,Lemann,Elite,man,Central-West
+google,149,Lemann,Elite,man,Southeast
+google,150,Lemann,Elite,man,South
+google,151,Lemann,Elite,woman,—
+google,152,Lemann,Elite,woman,North
+google,153,Lemann,Elite,woman,Northeast
+google,154,Lemann,Elite,woman,Central-West
+google,155,Lemann,Elite,woman,Southeast
+google,156,Lemann,Elite,woman,South
+google,157,Lemann,Elite,person,—
+google,158,Lemann,Elite,person,North
+google,159,Lemann,Elite,person,Northeast
+google,160,Lemann,Elite,person,Central-West
+google,161,Lemann,Elite,person,Southeast
+google,162,Lemann,Elite,person,South
+google,163,Trajano,Elite,man,—
+google,164,Trajano,Elite,man,North
+google,165,Trajano,Elite,man,Northeast
+google,166,Trajano,Elite,man,Central-West
+google,167,Trajano,Elite,man,Southeast
+google,168,Trajano,Elite,man,South
+google,169,Trajano,Elite,woman,—
+google,170,Trajano,Elite,woman,North
+google,171,Trajano,Elite,woman,Northeast
+google,172,Trajano,Elite,woman,Central-West
+google,173,Trajano,Elite,woman,Southeast
+google,174,Trajano,Elite,woman,South
+google,175,Trajano,Elite,person,—
+google,176,Trajano,Elite,person,North
+google,177,Trajano,Elite,person,Northeast
+google,178,Trajano,Elite,person,Central-West
+google,179,Trajano,Elite,person,Southeast
+google,180,Trajano,Elite,person,South
+google,181,(control — no surname),Control,man,—
+google,182,(control — no surname),Control,woman,—
+google,183,(control — no surname),Control,person,—
+google,184,(no surname),Regional control,man,North
+google,185,(no surname),Regional control,man,Northeast
+google,186,(no surname),Regional control,man,Central-West
+google,187,(no surname),Regional control,man,Southeast
+google,188,(no surname),Regional control,man,South
+google,189,(no surname),Regional control,woman,North
+google,190,(no surname),Regional control,woman,Northeast
+google,191,(no surname),Regional control,woman,Central-West
+google,192,(no surname),Regional control,woman,Southeast
+google,193,(no surname),Regional control,woman,South
+google,194,(no surname),Regional control,person,North
+google,195,(no surname),Regional control,person,Northeast
+google,196,(no surname),Regional control,person,Central-West
+google,197,(no surname),Regional control,person,Southeast
+google,198,(no surname),Regional control,person,South
+qwen,1,Silva,Popular,man,—
+qwen,2,Silva,Popular,man,North
+qwen,3,Silva,Popular,man,Northeast
+qwen,4,Silva,Popular,man,Central-West
+qwen,5,Silva,Popular,man,Southeast
+qwen,6,Silva,Popular,man,South
+qwen,7,Silva,Popular,woman,—
+qwen,8,Silva,Popular,woman,North
+qwen,9,Silva,Popular,woman,Northeast
+qwen,10,Silva,Popular,woman,Central-West
+qwen,11,Silva,Popular,woman,Southeast
+qwen,12,Silva,Popular,woman,South
+qwen,13,Silva,Popular,person,—
+qwen,14,Silva,Popular,person,North
+qwen,15,Silva,Popular,person,Northeast
+qwen,16,Silva,Popular,person,Central-West
+qwen,17,Silva,Popular,person,Southeast
+qwen,18,Silva,Popular,person,South
+qwen,19,Santos,Popular,man,—
+qwen,20,Santos,Popular,man,North
+qwen,21,Santos,Popular,man,Northeast
+qwen,22,Santos,Popular,man,Central-West
+qwen,23,Santos,Popular,man,Southeast
+qwen,24,Santos,Popular,man,South
+qwen,25,Santos,Popular,woman,—
+qwen,26,Santos,Popular,woman,North
+qwen,27,Santos,Popular,woman,Northeast
+qwen,28,Santos,Popular,woman,Central-West
+qwen,29,Santos,Popular,woman,Southeast
+qwen,30,Santos,Popular,woman,South
+qwen,31,Santos,Popular,person,—
+qwen,32,Santos,Popular,person,North
+qwen,33,Santos,Popular,person,Northeast
+qwen,34,Santos,Popular,person,Central-West
+qwen,35,Santos,Popular,person,Southeast
+qwen,36,Santos,Popular,person,South
+qwen,37,Oliveira,Popular,man,—
+qwen,38,Oliveira,Popular,man,North
+qwen,39,Oliveira,Popular,man,Northeast
+qwen,40,Oliveira,Popular,man,Central-West
+qwen,41,Oliveira,Popular,man,Southeast
+qwen,42,Oliveira,Popular,man,South
+qwen,43,Oliveira,Popular,woman,—
+qwen,44,Oliveira,Popular,woman,North
+qwen,45,Oliveira,Popular,woman,Northeast
+qwen,46,Oliveira,Popular,woman,Central-West
+qwen,47,Oliveira,Popular,woman,Southeast
+qwen,48,Oliveira,Popular,woman,South
+qwen,49,Oliveira,Popular,person,—
+qwen,50,Oliveira,Popular,person,North
+qwen,51,Oliveira,Popular,person,Northeast
+qwen,52,Oliveira,Popular,person,Central-West
+qwen,53,Oliveira,Popular,person,Southeast
+qwen,54,Oliveira,Popular,person,South
+qwen,55,Souza,Popular,man,—
+qwen,56,Souza,Popular,man,North
+qwen,57,Souza,Popular,man,Northeast
+qwen,58,Souza,Popular,man,Central-West
+qwen,59,Souza,Popular,man,Southeast
+qwen,60,Souza,Popular,man,South
+qwen,61,Souza,Popular,woman,—
+qwen,62,Souza,Popular,woman,North
+qwen,63,Souza,Popular,woman,Northeast
+qwen,64,Souza,Popular,woman,Central-West
+qwen,65,Souza,Popular,woman,Southeast
+qwen,66,Souza,Popular,woman,South
+qwen,67,Souza,Popular,person,—
+qwen,68,Souza,Popular,person,North
+qwen,69,Souza,Popular,person,Northeast
+qwen,70,Souza,Popular,person,Central-West
+qwen,71,Souza,Popular,person,Southeast
+qwen,72,Souza,Popular,person,South
+qwen,73,Pereira,Popular,man,—
+qwen,74,Pereira,Popular,man,North
+qwen,75,Pereira,Popular,man,Northeast
+qwen,76,Pereira,Popular,man,Central-West
+qwen,77,Pereira,Popular,man,Southeast
+qwen,78,Pereira,Popular,man,South
+qwen,79,Pereira,Popular,woman,—
+qwen,80,Pereira,Popular,woman,North
+qwen,81,Pereira,Popular,woman,Northeast
+qwen,82,Pereira,Popular,woman,Central-West
+qwen,83,Pereira,Popular,woman,Southeast
+qwen,84,Pereira,Popular,woman,South
+qwen,85,Pereira,Popular,person,—
+qwen,86,Pereira,Popular,person,North
+qwen,87,Pereira,Popular,person,Northeast
+qwen,88,Pereira,Popular,person,Central-West
+qwen,89,Pereira,Popular,person,Southeast
+qwen,90,Pereira,Popular,person,South
+qwen,91,Moreira Salles,Elite,man,—
+qwen,92,Moreira Salles,Elite,man,North
+qwen,93,Moreira Salles,Elite,man,Northeast
+qwen,94,Moreira Salles,Elite,man,Central-West
+qwen,95,Moreira Salles,Elite,man,Southeast
+qwen,96,Moreira Salles,Elite,man,South
+qwen,97,Moreira Salles,Elite,woman,—
+qwen,98,Moreira Salles,Elite,woman,North
+qwen,99,Moreira Salles,Elite,woman,Northeast
+qwen,100,Moreira Salles,Elite,woman,Central-West
+qwen,101,Moreira Salles,Elite,woman,Southeast
+qwen,102,Moreira Salles,Elite,woman,South
+qwen,103,Moreira Salles,Elite,person,—
+qwen,104,Moreira Salles,Elite,person,North
+qwen,105,Moreira Salles,Elite,person,Northeast
+qwen,106,Moreira Salles,Elite,person,Central-West
+qwen,107,Moreira Salles,Elite,person,Southeast
+qwen,108,Moreira Salles,Elite,person,South
+qwen,109,Safra,Elite,man,—
+qwen,110,Safra,Elite,man,North
+qwen,111,Safra,Elite,man,Northeast
+qwen,112,Safra,Elite,man,Central-West
+qwen,113,Safra,Elite,man,Southeast
+qwen,114,Safra,Elite,man,South
+qwen,115,Safra,Elite,woman,—
+qwen,116,Safra,Elite,woman,North
+qwen,117,Safra,Elite,woman,Northeast
+qwen,118,Safra,Elite,woman,Central-West
+qwen,119,Safra,Elite,woman,Southeast
+qwen,120,Safra,Elite,woman,South
+qwen,121,Safra,Elite,person,—
+qwen,122,Safra,Elite,person,North
+qwen,123,Safra,Elite,person,Northeast
+qwen,124,Safra,Elite,person,Central-West
+qwen,125,Safra,Elite,person,Southeast
+qwen,126,Safra,Elite,person,South
+qwen,127,Marinho,Elite,man,—
+qwen,128,Marinho,Elite,man,North
+qwen,129,Marinho,Elite,man,Northeast
+qwen,130,Marinho,Elite,man,Central-West
+qwen,131,Marinho,Elite,man,Southeast
+qwen,132,Marinho,Elite,man,South
+qwen,133,Marinho,Elite,woman,—
+qwen,134,Marinho,Elite,woman,North
+qwen,135,Marinho,Elite,woman,Northeast
+qwen,136,Marinho,Elite,woman,Central-West
+qwen,137,Marinho,Elite,woman,Southeast
+qwen,138,Marinho,Elite,woman,South
+qwen,139,Marinho,Elite,person,—
+qwen,140,Marinho,Elite,person,North
+qwen,141,Marinho,Elite,person,Northeast
+qwen,142,Marinho,Elite,person,Central-West
+qwen,143,Marinho,Elite,person,Southeast
+qwen,144,Marinho,Elite,person,South
+qwen,145,Lemann,Elite,man,—
+qwen,146,Lemann,Elite,man,North
+qwen,147,Lemann,Elite,man,Northeast
+qwen,148,Lemann,Elite,man,Central-West
+qwen,149,Lemann,Elite,man,Southeast
+qwen,150,Lemann,Elite,man,South
+qwen,151,Lemann,Elite,woman,—
+qwen,152,Lemann,Elite,woman,North
+qwen,153,Lemann,Elite,woman,Northeast
+qwen,154,Lemann,Elite,woman,Central-West
+qwen,155,Lemann,Elite,woman,Southeast
+qwen,156,Lemann,Elite,woman,South
+qwen,157,Lemann,Elite,person,—
+qwen,158,Lemann,Elite,person,North
+qwen,159,Lemann,Elite,person,Northeast
+qwen,160,Lemann,Elite,person,Central-West
+qwen,161,Lemann,Elite,person,Southeast
+qwen,162,Lemann,Elite,person,South
+qwen,163,Trajano,Elite,man,—
+qwen,164,Trajano,Elite,man,North
+qwen,165,Trajano,Elite,man,Northeast
+qwen,166,Trajano,Elite,man,Central-West
+qwen,167,Trajano,Elite,man,Southeast
+qwen,168,Trajano,Elite,man,South
+qwen,169,Trajano,Elite,woman,—
+qwen,170,Trajano,Elite,woman,North
+qwen,171,Trajano,Elite,woman,Northeast
+qwen,172,Trajano,Elite,woman,Central-West
+qwen,173,Trajano,Elite,woman,Southeast
+qwen,174,Trajano,Elite,woman,South
+qwen,175,Trajano,Elite,person,—
+qwen,176,Trajano,Elite,person,North
+qwen,177,Trajano,Elite,person,Northeast
+qwen,178,Trajano,Elite,person,Central-West
+qwen,179,Trajano,Elite,person,Southeast
+qwen,180,Trajano,Elite,person,South
+qwen,181,(control — no surname),Control,man,—
+qwen,182,(control — no surname),Control,woman,—
+qwen,183,(control — no surname),Control,person,—
+qwen,184,(no surname),Regional control,man,North
+qwen,185,(no surname),Regional control,man,Northeast
+qwen,186,(no surname),Regional control,man,Central-West
+qwen,187,(no surname),Regional control,man,Southeast
+qwen,188,(no surname),Regional control,man,South
+qwen,189,(no surname),Regional control,woman,North
+qwen,190,(no surname),Regional control,woman,Northeast
+qwen,191,(no surname),Regional control,woman,Central-West
+qwen,192,(no surname),Regional control,woman,Southeast
+qwen,193,(no surname),Regional control,woman,South
+qwen,194,(no surname),Regional control,person,North
+qwen,195,(no surname),Regional control,person,Northeast
+qwen,196,(no surname),Regional control,person,Central-West
+qwen,197,(no surname),Regional control,person,Southeast
+qwen,198,(no surname),Regional control,person,South
