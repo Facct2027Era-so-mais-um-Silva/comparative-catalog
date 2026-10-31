@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Bias audit — image comparison catalog</title>
+<title>Surname audit — supplementary material</title>
 <style>
   :root{
     --paper:#F5F6F3;
@@ -18,6 +18,7 @@
     --tint-elite:#F2DFD3;
     --tint-controle:#E2ECE2;
     --tint-controle-regional:#E5E3ED;
+    --topbar-h:68px;
     --mono: ui-monospace, "SF Mono", "Consolas", "Liberation Mono", monospace;
     --sans: ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
   }
@@ -61,13 +62,13 @@
     background:var(--accent-soft); color:var(--accent); white-space:nowrap;
   }
 
-  .shell{display:flex; min-height:calc(100vh - 57px);}
+  .shell{display:flex; min-height:calc(100vh - var(--topbar-h));}
 
   /* ---------- Sidebar: index-card filter rail ---------- */
   aside.rail{
     width:250px; flex-shrink:0; background:var(--paper-raised);
     border-right:1px solid var(--rule); padding:18px 16px 40px;
-    position:sticky; top:57px; align-self:flex-start; height:calc(100vh - 57px); overflow-y:auto;
+    position:sticky; top:var(--topbar-h); align-self:flex-start; height:calc(100vh - var(--topbar-h)); overflow-y:auto;
   }
   .rail h2{
     font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.08em;
@@ -190,6 +191,51 @@
   .error-box code{font-family:var(--mono); background:#F0DDD8; padding:1px 5px; border-radius:3px;}
   .card:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
   .filter-row input:disabled + span{opacity:.5;}
+
+  /* ---------- View tabs ---------- */
+  [hidden]{display:none !important;}
+  header.topbar{flex-wrap:wrap;}
+  .nav{display:flex; gap:4px; margin-left:6px;}
+  .nav button{
+    font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em;
+    padding:8px 12px; border:1px solid transparent; background:none; color:var(--ink-soft);
+    border-radius:3px; cursor:pointer;
+  }
+  .nav button:hover{color:var(--ink);}
+  .nav button[aria-selected="true"]{color:var(--accent); background:var(--accent-soft); font-weight:700;}
+  .nav button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  /* ---------- CLIP analysis ---------- */
+  #viewClip{padding:22px 26px 60px;}
+  .clip-toolbar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:6px 18px; background:var(--paper-raised);
+    border:1px solid var(--rule); border-radius:4px; padding:10px 14px; margin-bottom:16px;
+  }
+  .clip-toolbar .legend-title{
+    font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft);
+  }
+  .clip-toolbar label{display:flex; align-items:center; gap:6px; font-size:12.5px; cursor:pointer;}
+  .clip-toolbar svg{display:block;}
+  .clip-hint{font-family:var(--mono); font-size:11px; color:var(--ink-soft); margin-left:auto;}
+  .clip-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap:14px;}
+  .clip-panel{
+    background:var(--paper-raised); border:1px solid var(--rule); border-radius:4px;
+    padding:12px 12px 4px; min-width:0;
+  }
+  .clip-panel h3{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; margin:0 0 4px;
+  }
+  .clip-plot{height:470px; width:100%;}
+  .clip-tip{
+    position:fixed; display:none; pointer-events:none; z-index:70; max-width:230px;
+    background:#fff; border:1px solid #888; border-radius:6px; padding:6px;
+    box-shadow:0 2px 8px rgba(0,0,0,.3); font-size:12px; color:var(--ink);
+  }
+  .clip-tip img{display:block; width:100%; max-width:210px; border-radius:3px; margin-bottom:5px;}
+  .clip-tip .tt-id{font-family:var(--mono); font-size:10.5px; color:var(--accent);}
+  .clip-tip .tt-prompt{margin-top:2px; font-weight:600;}
+  .clip-tip .tt-meta{margin-top:3px; color:var(--ink-soft);}
+  @media (max-width: 780px){ #viewClip{padding:16px 14px 50px;} .clip-hint{margin-left:0;} }
 </style>
 </head>
 <body>
@@ -197,13 +243,17 @@
 <header class="topbar">
   <div>
     <span class="eyebrow">Algorithmic audit · supplementary material</span>
-    <h1>Image comparison catalog</h1>
+    <h1>Surname audit</h1>
   </div>
+  <nav class="nav" role="tablist" aria-label="Sections">
+    <button type="button" role="tab" id="tabCatalog" data-view="catalog" aria-selected="true" aria-controls="viewCatalog">Catalog</button>
+    <button type="button" role="tab" id="tabClip" data-view="clip" aria-selected="false" aria-controls="viewClip">CLIP analysis</button>
+  </nav>
   <div class="spacer"></div>
   <span class="status-pill" id="countPill">loading…</span>
 </header>
 
-<div class="shell">
+<div class="shell" id="viewCatalog" role="tabpanel" aria-labelledby="tabCatalog">
   <aside class="rail" id="rail" aria-label="Filters">
     <h2>Category</h2>
     <div id="filterCategoria"></div>
@@ -221,7 +271,7 @@
   <main>
     <details class="about" open>
       <summary>About this page</summary>
-      <p>Images generated by three popular generative models (Meta AI, Google Gemini, Qwen) from Portuguese prompts built around Brazilian surnames, with or without gender and region markers. Each card is one prompt: click it to see the output of every model side by side, and click an image to enlarge it. The English line under each prompt is a translation for readers; the prompts were run in Portuguese.</p>
+      <p>Images generated by three text-to-image models (Meta, Google, Qwen) from Portuguese prompts built around Brazilian surnames, with or without gender and region markers. Each card is one prompt: click it to see the output of every model side by side, and click an image to enlarge it. The English line under each prompt is a translation for readers; the prompts were run in Portuguese.</p>
       <p>Use the filters to combine surnames, genders, regions and models. Several values can be selected at once.</p>
     </details>
 
@@ -236,6 +286,24 @@
     </div>
   </main>
 </div>
+
+<section id="viewClip" role="tabpanel" aria-labelledby="tabClip" hidden>
+  <details class="about" open>
+    <summary>About these graphs</summary>
+    <p>Each panel shows the images produced by one model, embedded with OpenCLIP and projected to two dimensions with UMAP (one image per prompt, 198 points per model). Points that sit close together are images that CLIP represents similarly. Every panel has its own coordinates (the axis ranges differ), so positions should not be compared across panels. Color and shape mark the region named in the prompt; grey circles are prompts that name no region.</p>
+    <p>Hover a point to preview its image and prompt, click it to open the side-by-side comparison of all models for that prompt, drag to zoom and double-click to reset.</p>
+  </details>
+
+  <div id="clipError" class="error-box" style="display:none;"></div>
+  <div id="clipLoading" class="empty-state" style="margin:40px auto;">Loading graphs…</div>
+
+  <div id="clipBody" hidden>
+    <div class="clip-toolbar" id="clipLegend" role="group" aria-label="Regions shown in all graphs"></div>
+    <div class="clip-grid" id="clipGrid"></div>
+  </div>
+</section>
+
+<div class="clip-tip" id="clipTip"></div>
 
 <div class="overlay" id="overlay" style="display:none;" role="dialog" aria-modal="true"></div>
 
@@ -440,6 +508,156 @@
     $("#overlay").innerHTML = "";
     if(lastFocus && lastFocus.focus) lastFocus.focus();
   }
+
+  // ---------- Views (Catalog / CLIP analysis) ----------
+  const VIEWS = { catalog: $("#viewCatalog"), clip: $("#viewClip") };
+  const viewFromHash = () => (location.hash === "#clip" ? "clip" : "catalog");
+
+  function showView(name){
+    Object.keys(VIEWS).forEach(k => { VIEWS[k].hidden = (k !== name); });
+    $$(".nav button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.view === name)));
+    $("#countPill").style.display = name === "catalog" ? "" : "none";
+    hideTip();
+    if(name === "clip") ensureClip();
+  }
+  $$(".nav button").forEach(b => b.addEventListener("click", () => {
+    const target = "#" + b.dataset.view;
+    if(location.hash === target) showView(b.dataset.view); else location.hash = target;
+    window.scrollTo(0, 0);
+  }));
+  window.addEventListener("hashchange", () => showView(viewFromHash()));
+
+  // ---------- CLIP analysis ----------
+  const PLOTLY_URL = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+  const REGION_ORDER = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul", "—"];
+  const REGION_STYLE = {
+    "Norte":        { color:"#0072B2", symbol:"circle" },
+    "Nordeste":     { color:"#56B4E9", symbol:"square" },
+    "Centro-Oeste": { color:"#D55E00", symbol:"diamond" },
+    "Sudeste":      { color:"#E69F00", symbol:"triangle-up" },
+    "Sul":          { color:"#009E73", symbol:"cross" },
+    "—":            { color:"#999999", symbol:"circle" },
+  };
+  const SYMBOL_SVG = {
+    "circle": '<circle cx="8" cy="8" r="5"/>',
+    "square": '<rect x="3" y="3" width="10" height="10"/>',
+    "diamond": '<polygon points="8,1.5 14.5,8 8,14.5 1.5,8"/>',
+    "triangle-up": '<polygon points="8,2 14.5,13.5 1.5,13.5"/>',
+    "cross": '<polygon points="6,1.5 10,1.5 10,6 14.5,6 14.5,10 10,10 10,14.5 6,14.5 6,10 1.5,10 1.5,6 6,6"/>',
+  };
+  const symbolSvg = (sym, color) =>
+    `<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="${color}" stroke="#000" stroke-width="1">${SYMBOL_SVG[sym]}</svg>`;
+
+  let clipStatus = null;          // null | "loading" | "ready"
+  const clipRecs = {};            // model -> array of point records
+  const clipPlots = [];           // plot elements, to resize / restyle together
+
+  function loadPlotly(){
+    if(window.Plotly) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+      const el = document.createElement("script");
+      el.src = PLOTLY_URL;
+      el.onload = resolve;
+      el.onerror = () => reject(new Error("plotly"));
+      document.head.appendChild(el);
+    });
+  }
+  const loadClipData = () => fetch("clip-data.json").then(r => {
+    if(!r.ok) throw new Error("data");
+    return r.json();
+  }, () => { throw new Error("data"); });
+
+  function ensureClip(){
+    if(clipStatus === "ready"){ clipPlots.forEach(gd => window.Plotly.Plots.resize(gd)); return; }
+    if(clipStatus === "loading") return;
+    clipStatus = "loading";
+    $("#clipError").style.display = "none";
+    $("#clipLoading").hidden = false;
+    Promise.all([loadPlotly(), loadClipData()])
+      .then(([, data]) => { buildClip(data); clipStatus = "ready"; })
+      .catch(err => {
+        clipStatus = null;
+        $("#clipLoading").hidden = true;
+        const box = $("#clipError");
+        box.style.display = "block";
+        box.innerHTML = err.message === "plotly"
+          ? "Could not load the plotting library (<code>plotly</code>). This tab needs an internet connection; reload the page to try again."
+          : "Could not load <code>clip-data.json</code>. Make sure it was uploaded next to <code>index.html</code>. If you opened this file directly from your disk, serve the folder through a local web server instead (for example <code>python3 -m http.server</code>).";
+      });
+  }
+
+  function buildClip(data){
+    const idx = Object.fromEntries(data.fields.map((f, i) => [f, i]));
+    data.models.forEach(m => {
+      clipRecs[m] = data.data[m].map(a => ({
+        id: a[idx.id], x: a[idx.x], y: a[idx.y], category: a[idx.category], surname: a[idx.surname],
+        gender: a[idx.gender], region: a[idx.region], img: "data:image/jpeg;base64," + a[idx.img],
+      }));
+    });
+
+    // One shared legend that filters the regions in all graphs at once.
+    $("#clipLegend").innerHTML = `<span class="legend-title">Region</span>` + REGION_ORDER.map((reg, i) =>
+      `<label><input type="checkbox" data-trace="${i}" checked>${symbolSvg(REGION_STYLE[reg].symbol, REGION_STYLE[reg].color)}<span>${esc(label("regiao", reg))}</span></label>`
+    ).join("") + `<span class="clip-hint">hover: preview · click: compare models</span>`;
+    $$("#clipLegend input").forEach(cb => cb.addEventListener("change", () => {
+      clipPlots.forEach(gd => window.Plotly.restyle(gd, { visible: cb.checked }, [Number(cb.dataset.trace)]));
+    }));
+
+    const grid = $("#clipGrid");
+    grid.innerHTML = "";
+    data.models.forEach(model => {
+      const recs = clipRecs[model];
+      const panel = document.createElement("div");
+      panel.className = "clip-panel";
+      panel.innerHTML = `<h3>${esc(model)}</h3><div class="clip-plot" role="img" aria-label="UMAP of OpenCLIP embeddings of the ${esc(model)} images, colored by region"></div>`;
+      grid.appendChild(panel);
+      const gd = panel.querySelector(".clip-plot");
+
+      const traces = REGION_ORDER.map(reg => {
+        const ids = recs.map((r, i) => r.region === reg ? i : -1).filter(i => i >= 0);
+        return {
+          type: "scatter", mode: "markers", name: label("regiao", reg), hoverinfo: "none",
+          x: ids.map(i => recs[i].x), y: ids.map(i => recs[i].y), customdata: ids,
+          marker: { color: REGION_STYLE[reg].color, symbol: REGION_STYLE[reg].symbol, size: 10, line: { color: "black", width: 1 } },
+        };
+      });
+      const axis = (t) => ({ title: { text: t, font: { size: 11 } }, showticklabels: false, ticks: "", showgrid: true, gridcolor: "#E5E5E5", zeroline: false });
+      const layout = {
+        margin: { l: 28, r: 10, t: 6, b: 30 }, showlegend: false, hovermode: "closest",
+        plot_bgcolor: "white", paper_bgcolor: "rgba(0,0,0,0)", font: { size: 12 },
+        xaxis: axis("UMAP 1"), yaxis: axis("UMAP 2"),
+      };
+      window.Plotly.newPlot(gd, traces, layout, { responsive: true, displaylogo: false, modeBarButtonsToRemove: ["select2d", "lasso2d"] }).then(() => {
+        gd.on("plotly_hover", ev => showTip(recs[ev.points[0].customdata], ev.event));
+        gd.on("plotly_unhover", hideTip);
+        gd.on("plotly_click", ev => { hideTip(); openDetail(recs[ev.points[0].customdata].id); });
+      });
+      clipPlots.push(gd);
+    });
+    $("#clipLoading").hidden = true;
+    $("#clipBody").hidden = false;
+    clipPlots.forEach(gd => window.Plotly.Plots.resize(gd));
+  }
+
+  // ---------- Hover preview ----------
+  function showTip(rec, e){
+    const row = manifest && manifest.rows.find(r => r.id === rec.id);
+    const tip = $("#clipTip");
+    tip.innerHTML = `<img src="${rec.img}" alt="">
+      <div class="tt-id">#${rec.id} · ${esc(label("sobrenome", rec.surname).replace(/[()]/g, ""))}</div>
+      ${row ? `<div class="tt-prompt">${esc(row.prompt)}</div>` : ""}
+      <div class="tt-meta">${esc(label("categoria", rec.category))} · ${esc(label("genero", rec.gender))} · ${esc(label("regiao", rec.region))}</div>`;
+    tip.style.display = "block";
+    let x = e.clientX + 15, y = e.clientY + 15;
+    if(x + tip.offsetWidth > window.innerWidth) x = e.clientX - tip.offsetWidth - 15;
+    if(y + tip.offsetHeight > window.innerHeight) y = e.clientY - tip.offsetHeight - 15;
+    tip.style.left = Math.max(4, x) + "px";
+    tip.style.top = Math.max(4, y) + "px";
+  }
+  function hideTip(){ const t = $("#clipTip"); if(t) t.style.display = "none"; }
+
+  showView(viewFromHash());
+
   document.addEventListener("keydown", (e) => {
     if(e.key === "Escape"){ if($(".lightbox")) closeLightbox(); else closeModal(); }
   });
