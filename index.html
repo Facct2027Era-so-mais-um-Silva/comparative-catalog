@@ -235,7 +235,20 @@
   .clip-tip .tt-id{font-family:var(--mono); font-size:10.5px; color:var(--accent);}
   .clip-tip .tt-prompt{margin-top:2px; font-weight:600;}
   .clip-tip .tt-meta{margin-top:3px; color:var(--ink-soft);}
-  @media (max-width: 780px){ #viewClip{padding:16px 14px 50px;} .clip-hint{margin-left:0;} }
+  @media (max-width: 780px){ #viewClip, #viewSkin{padding:16px 14px 50px;} .clip-hint{margin-left:0;} .nav button{font-size:10.5px; padding:8px 9px;} }
+
+  /* ---------- Skin tone analysis ---------- */
+  #viewSkin{padding:22px 26px 60px;}
+  .nav{flex-wrap:wrap;}
+  .fig-title{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--ink-soft); margin:26px 0 4px; border-bottom:1px solid var(--rule); padding-bottom:6px;
+  }
+  .fig-title:first-of-type{margin-top:0;}
+  .fig-note{font-size:12.5px; color:var(--ink-soft); margin:0 0 10px;}
+  .skin-grid{display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px;}
+  .skin-plot{height:470px;}
+  @media (max-width: 1100px){ .skin-grid{grid-template-columns:minmax(0, 1fr);} }
 </style>
 </head>
 <body>
@@ -248,6 +261,7 @@
   <nav class="nav" role="tablist" aria-label="Sections">
     <button type="button" role="tab" id="tabCatalog" data-view="catalog" aria-selected="true" aria-controls="viewCatalog">Catalog</button>
     <button type="button" role="tab" id="tabClip" data-view="clip" aria-selected="false" aria-controls="viewClip">CLIP analysis</button>
+    <button type="button" role="tab" id="tabSkin" data-view="skin" aria-selected="false" aria-controls="viewSkin">Skin Tone Analysis</button>
   </nav>
   <div class="spacer"></div>
   <span class="status-pill" id="countPill">loading…</span>
@@ -300,6 +314,26 @@
   <div id="clipBody" hidden>
     <div class="clip-toolbar" id="clipLegend" role="group" aria-label="Regions shown in all graphs"></div>
     <div class="clip-grid" id="clipGrid"></div>
+  </div>
+</section>
+
+<section id="viewSkin" role="tabpanel" aria-labelledby="tabSkin" hidden>
+  <details class="about" open>
+    <summary>About these graphs</summary>
+    <p>Each point is one image (<span id="skinCounts">one per prompt and model</span>), filled with its dominant skin color and placed vertically at that color's lightness, L* in CIELAB (higher means lighter). Images without a skin color value are not plotted, and each panel title shows its n. Points are spread horizontally within each region only to avoid overlap, and the black line marks the median of each region in each panel. All panels share the same vertical scale. The first figure groups the images by model and the second by surname category; <em>Control</em> includes both control types (a region without a surname, and neither surname nor region).</p>
+    <p>Hover a point to preview its image, prompt and color, and click it to open the side-by-side comparison of all models for that prompt.</p>
+  </details>
+
+  <div id="skinError" class="error-box" style="display:none;"></div>
+  <div id="skinLoading" class="empty-state" style="margin:40px auto;">Loading graphs…</div>
+
+  <div id="skinBody" hidden>
+    <h2 class="fig-title">By model</h2>
+    <p class="fig-note">Skin color lightness by region (black line = median).</p>
+    <div class="skin-grid" id="skinByModel"></div>
+    <h2 class="fig-title">By surname category</h2>
+    <p class="fig-note">Skin color lightness by region (black line = median).</p>
+    <div class="skin-grid" id="skinByCategory"></div>
   </div>
 </section>
 
@@ -510,8 +544,8 @@
   }
 
   // ---------- Views (Catalog / CLIP analysis) ----------
-  const VIEWS = { catalog: $("#viewCatalog"), clip: $("#viewClip") };
-  const viewFromHash = () => (location.hash === "#clip" ? "clip" : "catalog");
+  const VIEWS = { catalog: $("#viewCatalog"), clip: $("#viewClip"), skin: $("#viewSkin") };
+  const viewFromHash = () => ({ "#clip": "clip", "#skin": "skin" }[location.hash] || "catalog");
 
   function showView(name){
     Object.keys(VIEWS).forEach(k => { VIEWS[k].hidden = (k !== name); });
@@ -519,6 +553,7 @@
     $("#countPill").style.display = name === "catalog" ? "" : "none";
     hideTip();
     if(name === "clip") ensureClip();
+    if(name === "skin") ensureSkin();
   }
   $$(".nav button").forEach(b => b.addEventListener("click", () => {
     const target = "#" + b.dataset.view;
@@ -562,10 +597,17 @@
       document.head.appendChild(el);
     });
   }
-  const loadClipData = () => fetch("clip-data.json").then(r => {
-    if(!r.ok) throw new Error("data");
-    return r.json();
-  }, () => { throw new Error("data"); });
+  let clipDataPromise = null;   // clip-data.json also feeds the image previews of the skin tone tab
+  const loadClipData = () => {
+    if(!clipDataPromise){
+      clipDataPromise = fetch("clip-data.json").then(r => {
+        if(!r.ok) throw new Error("data");
+        return r.json();
+      }, () => { throw new Error("data"); });
+      clipDataPromise.catch(() => { clipDataPromise = null; });
+    }
+    return clipDataPromise;
+  };
 
   function ensureClip(){
     if(clipStatus === "ready"){ clipPlots.forEach(gd => window.Plotly.Plots.resize(gd)); return; }
@@ -574,7 +616,7 @@
     $("#clipError").style.display = "none";
     $("#clipLoading").hidden = false;
     Promise.all([loadPlotly(), loadClipData()])
-      .then(([, data]) => { buildClip(data); clipStatus = "ready"; })
+      .then(([, data]) => { prepareClipRecs(data); buildClip(data); clipStatus = "ready"; })
       .catch(err => {
         clipStatus = null;
         $("#clipLoading").hidden = true;
@@ -586,7 +628,8 @@
       });
   }
 
-  function buildClip(data){
+  function prepareClipRecs(data){
+    if(clipRecs[data.models[0]]) return;
     const idx = Object.fromEntries(data.fields.map((f, i) => [f, i]));
     data.models.forEach(m => {
       clipRecs[m] = data.data[m].map(a => ({
@@ -594,6 +637,10 @@
         gender: a[idx.gender], region: a[idx.region], img: "data:image/jpeg;base64," + a[idx.img],
       }));
     });
+  }
+
+  function buildClip(data){
+    prepareClipRecs(data);
 
     // One shared legend that filters the regions in all graphs at once.
     $("#clipLegend").innerHTML = `<span class="legend-title">Region</span>` + REGION_ORDER.map((reg, i) =>
@@ -640,13 +687,13 @@
   }
 
   // ---------- Hover preview ----------
-  function showTip(rec, e){
+  function showTip(rec, e, extra){
     const row = manifest && manifest.rows.find(r => r.id === rec.id);
     const tip = $("#clipTip");
     tip.innerHTML = `<img src="${rec.img}" alt="">
       <div class="tt-id">#${rec.id} · ${esc(label("sobrenome", rec.surname).replace(/[()]/g, ""))}</div>
       ${row ? `<div class="tt-prompt">${esc(row.prompt)}</div>` : ""}
-      <div class="tt-meta">${esc(label("categoria", rec.category))} · ${esc(label("genero", rec.gender))} · ${esc(label("regiao", rec.region))}</div>`;
+      <div class="tt-meta">${esc(label("categoria", rec.category))} · ${esc(label("genero", rec.gender))} · ${esc(label("regiao", rec.region))}</div>${extra ? `<div class="tt-meta">${extra}</div>` : ""}`;
     tip.style.display = "block";
     let x = e.clientX + 15, y = e.clientY + 15;
     if(x + tip.offsetWidth > window.innerWidth) x = e.clientX - tip.offsetWidth - 15;
@@ -655,6 +702,107 @@
     tip.style.top = Math.max(4, y) + "px";
   }
   function hideTip(){ const t = $("#clipTip"); if(t) t.style.display = "none"; }
+
+  // ---------- Skin tone analysis ----------
+  const SKIN_REGIONS = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul", "—"];
+  const SKIN_TICKS = ["North", "Northeast", "Central-West", "Southeast", "South", "No region"];
+  const isControl = (r) => r.category === "Controle" || r.category === "Controle regional";
+  const skinPlots = [];
+  let skinStatus = null;       // null | "loading" | "ready"
+
+  const median = (a) => {
+    const v = a.slice().sort((x, y) => x - y), h = v.length >> 1;
+    return v.length % 2 ? v[h] : (v[h - 1] + v[h]) / 2;
+  };
+
+  function ensureSkin(){
+    if(skinStatus === "ready"){ skinPlots.forEach(gd => window.Plotly.Plots.resize(gd)); return; }
+    if(skinStatus === "loading") return;
+    skinStatus = "loading";
+    $("#skinError").style.display = "none";
+    $("#skinLoading").hidden = false;
+    const skinData = fetch("skin-data.json").then(r => {
+      if(!r.ok) throw new Error("skin");
+      return r.json();
+    }, () => { throw new Error("skin"); });
+    Promise.all([loadPlotly(), loadClipData(), skinData])
+      .then(([, clip, skin]) => { prepareClipRecs(clip); buildSkin(skin); skinStatus = "ready"; })
+      .catch(err => {
+        skinStatus = null;
+        $("#skinLoading").hidden = true;
+        const box = $("#skinError");
+        box.style.display = "block";
+        box.innerHTML = err.message === "plotly"
+          ? "Could not load the plotting library (<code>plotly</code>). This tab needs an internet connection; reload the page to try again."
+          : "Could not load <code>" + (err.message === "skin" ? "skin-data.json" : "clip-data.json") + "</code> (the image previews come from <code>clip-data.json</code>). Make sure both files were uploaded next to <code>index.html</code>. If you opened this file directly from your disk, serve the folder through a local web server instead (for example <code>python3 -m http.server</code>).";
+      });
+  }
+
+  function buildSkin(skin){
+    const idx = Object.fromEntries(skin.fields.map((f, i) => [f, i]));
+    const byId = {};
+    Object.keys(clipRecs).forEach(m => { byId[m] = Object.fromEntries(clipRecs[m].map(r => [r.id, r])); });
+    const recs = skin.data.map(a => {
+      const base = byId[a[idx.model]] && byId[a[idx.model]][a[idx.id]];
+      if(!base) return null;
+      const color = /^#[0-9A-Fa-f]{6}$/.test(a[idx.color]) ? a[idx.color] : "#999999";
+      return Object.assign({}, base, {
+        model: a[idx.model], jitterModel: a[idx.jitter_by_model], jitterCategory: a[idx.jitter_by_category],
+        lightness: a[idx.lightness], color,
+      });
+    }).filter(Boolean);
+
+    const perModel = ["meta", "google", "qwen"].map(m => `${m.charAt(0).toUpperCase() + m.slice(1)} ${recs.filter(r => r.model === m).length}`);
+    $("#skinCounts").textContent = `${recs.length} in total: ${perModel.join(", ")}`;
+
+    const ls = recs.map(r => r.lightness);
+    const yRange = [Math.floor(Math.min(...ls)) - 2, Math.ceil(Math.max(...ls)) + 2];   // same scale in every panel
+
+    const facet = (container, title, items, jitterKey) => {
+      const panel = document.createElement("div");
+      panel.className = "clip-panel";
+      panel.innerHTML = `<h3>${esc(title)} <span style="text-transform:none;">(n=${items.length})</span></h3><div class="clip-plot skin-plot" role="img" aria-label="Skin color lightness by region, ${esc(title)}"></div>`;
+      container.appendChild(panel);
+      const gd = panel.querySelector(".clip-plot");
+      const points = {
+        type: "scatter", mode: "markers", hoverinfo: "none",
+        x: items.map(r => SKIN_REGIONS.indexOf(r.region) + r[jitterKey]),
+        y: items.map(r => r.lightness),
+        customdata: items.map((_, i) => i),
+        marker: { color: items.map(r => r.color), size: 10, line: { color: "black", width: 0.6 } },
+      };
+      const medians = SKIN_REGIONS.map((reg, i) => {
+        const m = median(items.filter(r => r.region === reg).map(r => r.lightness));
+        return { type: "scatter", mode: "lines", hoverinfo: "skip", x: [i - 0.35, i + 0.35], y: [m, m], line: { color: "black", width: 4 } };
+      });
+      const layout = {
+        margin: { l: 52, r: 10, t: 8, b: 84 }, showlegend: false, hovermode: "closest",
+        plot_bgcolor: "white", paper_bgcolor: "rgba(0,0,0,0)", font: { size: 12 },
+        xaxis: { tickvals: [0, 1, 2, 3, 4, 5], ticktext: SKIN_TICKS, tickangle: -45, range: [-0.6, 5.6], showgrid: false, zeroline: false, showline: true, linecolor: "black" },
+        yaxis: { title: { text: "Lightness (L*)", font: { size: 12 } }, range: yRange, showgrid: true, gridcolor: "#E5E5E5", showline: true, linecolor: "black", zeroline: false },
+      };
+      window.Plotly.newPlot(gd, [points].concat(medians), layout, { responsive: true, displaylogo: false, modeBarButtonsToRemove: ["select2d", "lasso2d"] }).then(() => {
+        const rec = (ev) => { const c = ev.points[0].customdata; return c == null ? null : items[c]; };
+        gd.on("plotly_hover", ev => {
+          const r = rec(ev); if(!r) return;
+          showTip(r, ev.event, `${esc(r.model)} · L* ${r.lightness.toFixed(1)} <span style="display:inline-block;width:12px;height:12px;border:1px solid #000;vertical-align:middle;background:${r.color}"></span> ${r.color}`);
+        });
+        gd.on("plotly_unhover", hideTip);
+        gd.on("plotly_click", ev => { const r = rec(ev); if(r){ hideTip(); openDetail(r.id); } });
+      });
+      skinPlots.push(gd);
+    };
+
+    $("#skinByModel").innerHTML = "";
+    $("#skinByCategory").innerHTML = "";
+    ["meta", "google", "qwen"].forEach(m => facet($("#skinByModel"), m.charAt(0).toUpperCase() + m.slice(1), recs.filter(r => r.model === m), "jitterModel"));
+    [["Control", r => isControl(r)], ["Elite", r => r.category === "Elite"], ["Popular", r => r.category === "Popular"]]
+      .forEach(([name, test]) => facet($("#skinByCategory"), name, recs.filter(test), "jitterCategory"));
+
+    $("#skinLoading").hidden = true;
+    $("#skinBody").hidden = false;
+    skinPlots.forEach(gd => window.Plotly.Plots.resize(gd));
+  }
 
   showView(viewFromHash());
 
