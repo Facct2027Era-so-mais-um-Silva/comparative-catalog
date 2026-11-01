@@ -321,7 +321,7 @@
     <summary>About these graphs</summary>
     <p>Each panel shows the images produced by one model, embedded with OpenCLIP and projected to two dimensions with UMAP (one image per prompt, 198 points per model). Points that sit close together are images that CLIP represents similarly. Every panel has its own coordinates (the axis ranges differ), so positions should not be compared across panels. Color and shape mark the region named in the prompt; grey circles are prompts that name no region.</p>
     <p>Hover a point to preview its image and prompt, click it to open the side-by-side comparison of all models for that prompt, drag to zoom and double-click to reset.</p>
-    <p>In the Google graph, numbered outlines mark groups of images with similar content, outlined by hand after inspecting the images. Hover an outline (or pick one from the list above the graph) to read what it contains; click empty space to clear the selection.</p>
+    <p>Numbered outlines mark groups of images with similar content. In the Google graph they were outlined by hand after inspecting the images; in the Meta and Qwen graphs they were proposed automatically from the layout of the points (average-linkage clustering into 10 groups) and then labeled after inspecting the images. Hover an outline (or pick one from the list above the graph) to read what it contains; click empty space to clear the selection.</p>
   </details>
 
   <div id="clipError" class="error-box" style="display:none;"></div>
@@ -610,7 +610,9 @@
     clipStatus = "loading";
     $("#clipError").style.display = "none";
     $("#clipLoading").hidden = false;
-    const clustersData = fetch("google-clusters.json").then(r => r.ok ? r.json() : null).catch(() => null);
+    const clustersData = Promise.all(["google", "meta", "qwen"].map(m =>
+      fetch(m + "-clusters.json").then(r => r.ok ? r.json() : null).catch(() => null)
+    )).then(list => { const o = {}; list.forEach(d => { if(d && d.clusters && d.clusters.length) o[d.model] = d; }); return Object.keys(o).length ? o : null; });
     Promise.all([loadPlotly(), loadClipData(), clustersData])
       .then(([, data, clusters]) => { prepareClipRecs(data); buildClip(data, clusters); clipStatus = "ready"; })
       .catch(err => {
@@ -641,7 +643,7 @@
     // One shared legend that filters the regions in all graphs at once.
     $("#clipLegend").innerHTML = `<span class="legend-title">Region</span>` + REGION_ORDER.map((reg, i) =>
       `<label><input type="checkbox" data-trace="${i}" checked>${symbolSvg(REGION_STYLE[reg].symbol, REGION_STYLE[reg].color)}<span>${esc(label("regiao", reg))}</span></label>`
-    ).join("") + (clusterData ? `<label><input type="checkbox" id="clusterToggle" checked><span>Google clusters</span></label>` : "") + `<span class="clip-hint">hover: preview · click: compare models</span>`;
+    ).join("") + (clusterData ? `<label><input type="checkbox" id="clusterToggle" checked><span>Cluster outlines</span></label>` : "") + `<span class="clip-hint">hover: preview · click: compare models</span>`;
     $$("#clipLegend input[data-trace]").forEach(cb => cb.addEventListener("change", () => {
       clipPlots.forEach(gd => window.Plotly.restyle(gd, { visible: cb.checked }, [Number(cb.dataset.trace)]));
     }));
@@ -650,10 +652,11 @@
     grid.innerHTML = "";
     data.models.forEach(model => {
       const recs = clipRecs[model];
-      const withInfo = model === "google" && clusterData && clusterData.clusters && clusterData.clusters.length;
+      const mc = clusterData && clusterData[model];
+      const withInfo = !!mc;
       const panel = document.createElement("div");
       panel.className = "clip-panel" + (withInfo ? " with-info" : "");
-      panel.innerHTML = `<h3>${esc(model)}</h3>${withInfo ? `<div class="cluster-chips" aria-label="Clusters in the Google graph"></div>` : ""}<div class="clip-plot" role="img" aria-label="UMAP of OpenCLIP embeddings of the ${esc(model)} images, colored by region"></div>${withInfo ? `<aside class="cluster-card" aria-live="polite"></aside>` : ""}`;
+      panel.innerHTML = `<h3>${esc(model)}</h3>${withInfo ? `<div class="cluster-chips" aria-label="Clusters in the ${esc(model)} graph"></div>` : ""}<div class="clip-plot" role="img" aria-label="UMAP of OpenCLIP embeddings of the ${esc(model)} images, colored by region"></div>${withInfo ? `<aside class="cluster-card" aria-live="polite"></aside>` : ""}`;
       grid.appendChild(panel);
       const gd = panel.querySelector(".clip-plot");
 
@@ -675,7 +678,7 @@
         gd.on("plotly_hover", ev => showTip(recs[ev.points[0].customdata], ev.event));
         gd.on("plotly_unhover", hideTip);
         gd.on("plotly_click", ev => { hideTip(); openDetail(recs[ev.points[0].customdata].id); });
-        if(withInfo) setupClusters(panel, gd, recs, clusterData);
+        if(withInfo) setupClusters(panel, gd, recs, mc, model);
       });
       clipPlots.push(gd);
     });
@@ -684,7 +687,7 @@
     clipPlots.forEach(gd => window.Plotly.Plots.resize(gd));
   }
 
-  // ---------- Cluster explorer (Google graph) ----------
+  // ---------- Cluster explorer (per model) ----------
   function inPoly(x, y, poly){
     let inside = false;
     for(let i = 0, j = poly.length - 1; i < poly.length; j = i++){
@@ -694,7 +697,7 @@
     return inside;
   }
 
-  function setupClusters(panel, gd, recs, data){
+  function setupClusters(panel, gd, recs, data, model){
     const byId = Object.fromEntries(recs.map(r => [r.id, r]));
     const clusters = data.clusters.map(c => Object.assign({}, c, { members: recs.filter(r => inPoly(r.x, r.y, c.polygon)) }));
     const card = panel.querySelector(".cluster-card"), chips = panel.querySelector(".cluster-chips");
@@ -716,7 +719,8 @@
     const countBy = (list, keyFn) => { const m = new Map(); list.forEach(r => { const k = keyFn(r); m.set(k, (m.get(k) || 0) + 1); }); return m; };
     function renderCard(c){
       if(!c){
-        card.innerHTML = `<p class="cc-hint">Hover over a numbered outline in the graph, or pick one from the list above, to see what it contains. Click empty space to clear the selection.</p>`;
+        card.innerHTML = `<p class="cc-hint">Hover over a numbered outline in the graph, or pick one from the list above, to see what it contains. Click empty space to clear the selection.</p>
+          <p class="cc-hint">${model === "google" ? "These outlines were drawn by hand after inspecting the images." : "These outlines were proposed automatically from the layout of the points (average-linkage clustering, 10 groups) and labeled after inspecting the images."}</p>`;
         return;
       }
       const region = countBy(c.members, r => r.region);
