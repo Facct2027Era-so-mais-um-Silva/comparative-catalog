@@ -235,6 +235,34 @@
   .clip-tip .tt-id{font-family:var(--mono); font-size:10.5px; color:var(--accent);}
   .clip-tip .tt-prompt{margin-top:2px; font-weight:600;}
   .clip-tip .tt-meta{margin-top:3px; color:var(--ink-soft);}
+  /* Google panel with cluster explorer */
+  .clip-panel.with-info{display:grid; grid-template-columns:minmax(0, 1fr) 310px; column-gap:14px; align-items:start;}
+  .clip-panel.with-info > h3, .clip-panel.with-info > .cluster-chips{grid-column:1 / -1;}
+  .cluster-chips{display:flex; flex-wrap:wrap; gap:6px; margin:2px 0 8px;}
+  .cluster-chips button{
+    font-family:var(--mono); font-size:10.5px; padding:4px 9px; border:1px solid var(--rule);
+    background:var(--paper-raised); color:var(--ink); border-radius:20px; cursor:pointer;
+  }
+  .cluster-chips button:hover{border-color:var(--accent);}
+  .cluster-chips button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:#fff;}
+  .cluster-chips button:focus-visible, .cc-ex button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .cluster-card{height:520px; overflow-y:auto; border:1px solid var(--rule); border-radius:4px; padding:12px 14px; background:var(--paper); font-size:12.5px;}
+  .cluster-card h4{margin:0 0 2px; font-size:14px; line-height:1.3;}
+  .cluster-card .cc-n{font-family:var(--mono); font-size:10.5px; color:var(--accent); margin:0 0 8px;}
+  .cluster-card p{margin:0 0 8px;}
+  .cluster-card .cc-reading{color:var(--ink-soft); font-style:italic;}
+  .cluster-card .cc-hint{color:var(--ink-soft);}
+  .cc-row{display:flex; flex-wrap:wrap; align-items:center; gap:3px 12px; margin:7px 0; font-size:12px;}
+  .cc-k{font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); width:100%;}
+  .cc-item{display:inline-flex; align-items:center; gap:4px;}
+  .cc-ex{display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:10px;}
+  .cc-ex button{padding:0; border:1px solid var(--rule); border-radius:4px; overflow:hidden; cursor:pointer; background:none;}
+  .cc-ex button:hover{border-color:var(--accent);}
+  .cc-ex img{display:block; width:100%;}
+  @media (max-width: 1000px){
+    .clip-panel.with-info{grid-template-columns:minmax(0, 1fr);}
+    .cluster-card{height:auto; max-height:none; margin-top:10px;}
+  }
   @media (max-width: 780px){ #viewClip{padding:16px 14px 50px;} .clip-hint{margin-left:0;} }
 
 </style>
@@ -293,6 +321,7 @@
     <summary>About these graphs</summary>
     <p>Each panel shows the images produced by one model, embedded with OpenCLIP and projected to two dimensions with UMAP (one image per prompt, 198 points per model). Points that sit close together are images that CLIP represents similarly. Every panel has its own coordinates (the axis ranges differ), so positions should not be compared across panels. Color and shape mark the region named in the prompt; grey circles are prompts that name no region.</p>
     <p>Hover a point to preview its image and prompt, click it to open the side-by-side comparison of all models for that prompt, drag to zoom and double-click to reset.</p>
+    <p>In the Google graph, numbered outlines mark groups of images with similar content, outlined by hand after inspecting the images. Hover an outline (or pick one from the list above the graph) to read what it contains; click empty space to clear the selection.</p>
   </details>
 
   <div id="clipError" class="error-box" style="display:none;"></div>
@@ -581,8 +610,9 @@
     clipStatus = "loading";
     $("#clipError").style.display = "none";
     $("#clipLoading").hidden = false;
-    Promise.all([loadPlotly(), loadClipData()])
-      .then(([, data]) => { prepareClipRecs(data); buildClip(data); clipStatus = "ready"; })
+    const clustersData = fetch("google-clusters.json").then(r => r.ok ? r.json() : null).catch(() => null);
+    Promise.all([loadPlotly(), loadClipData(), clustersData])
+      .then(([, data, clusters]) => { prepareClipRecs(data); buildClip(data, clusters); clipStatus = "ready"; })
       .catch(err => {
         clipStatus = null;
         $("#clipLoading").hidden = true;
@@ -605,14 +635,14 @@
     });
   }
 
-  function buildClip(data){
+  function buildClip(data, clusterData){
     prepareClipRecs(data);
 
     // One shared legend that filters the regions in all graphs at once.
     $("#clipLegend").innerHTML = `<span class="legend-title">Region</span>` + REGION_ORDER.map((reg, i) =>
       `<label><input type="checkbox" data-trace="${i}" checked>${symbolSvg(REGION_STYLE[reg].symbol, REGION_STYLE[reg].color)}<span>${esc(label("regiao", reg))}</span></label>`
-    ).join("") + `<span class="clip-hint">hover: preview · click: compare models</span>`;
-    $$("#clipLegend input").forEach(cb => cb.addEventListener("change", () => {
+    ).join("") + (clusterData ? `<label><input type="checkbox" id="clusterToggle" checked><span>Google clusters</span></label>` : "") + `<span class="clip-hint">hover: preview · click: compare models</span>`;
+    $$("#clipLegend input[data-trace]").forEach(cb => cb.addEventListener("change", () => {
       clipPlots.forEach(gd => window.Plotly.restyle(gd, { visible: cb.checked }, [Number(cb.dataset.trace)]));
     }));
 
@@ -620,9 +650,10 @@
     grid.innerHTML = "";
     data.models.forEach(model => {
       const recs = clipRecs[model];
+      const withInfo = model === "google" && clusterData && clusterData.clusters && clusterData.clusters.length;
       const panel = document.createElement("div");
-      panel.className = "clip-panel";
-      panel.innerHTML = `<h3>${esc(model)}</h3><div class="clip-plot" role="img" aria-label="UMAP of OpenCLIP embeddings of the ${esc(model)} images, colored by region"></div>`;
+      panel.className = "clip-panel" + (withInfo ? " with-info" : "");
+      panel.innerHTML = `<h3>${esc(model)}</h3>${withInfo ? `<div class="cluster-chips" aria-label="Clusters in the Google graph"></div>` : ""}<div class="clip-plot" role="img" aria-label="UMAP of OpenCLIP embeddings of the ${esc(model)} images, colored by region"></div>${withInfo ? `<aside class="cluster-card" aria-live="polite"></aside>` : ""}`;
       grid.appendChild(panel);
       const gd = panel.querySelector(".clip-plot");
 
@@ -644,12 +675,115 @@
         gd.on("plotly_hover", ev => showTip(recs[ev.points[0].customdata], ev.event));
         gd.on("plotly_unhover", hideTip);
         gd.on("plotly_click", ev => { hideTip(); openDetail(recs[ev.points[0].customdata].id); });
+        if(withInfo) setupClusters(panel, gd, recs, clusterData);
       });
       clipPlots.push(gd);
     });
     $("#clipLoading").hidden = true;
     $("#clipBody").hidden = false;
     clipPlots.forEach(gd => window.Plotly.Plots.resize(gd));
+  }
+
+  // ---------- Cluster explorer (Google graph) ----------
+  function inPoly(x, y, poly){
+    let inside = false;
+    for(let i = 0, j = poly.length - 1; i < poly.length; j = i++){
+      const [xi, yi] = poly[i], [xj, yj] = poly[j];
+      if(((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) inside = !inside;
+    }
+    return inside;
+  }
+
+  function setupClusters(panel, gd, recs, data){
+    const byId = Object.fromEntries(recs.map(r => [r.id, r]));
+    const clusters = data.clusters.map(c => Object.assign({}, c, { members: recs.filter(r => inPoly(r.x, r.y, c.polygon)) }));
+    const card = panel.querySelector(".cluster-card"), chips = panel.querySelector(".cluster-chips");
+    let selected = null, overPoint = false;
+
+    const shapes = clusters.map(c => ({
+      type: "path", path: "M" + c.polygon.map(p => p[0] + "," + p[1]).join("L") + "Z", xref: "x", yref: "y",
+      layer: "above", line: { color: "black", width: 1.5 }, fillcolor: "rgba(0,0,0,0)",
+    }));
+    const annotations = clusters.map(c => {
+      const top = c.polygon.reduce((a, b) => (b[1] > a[1] ? b : a));
+      return { x: top[0], y: top[1], xref: "x", yref: "y", text: `<b>${c.id}</b>`, showarrow: false, yshift: 10,
+        font: { size: 11, color: "black" }, bgcolor: "white", bordercolor: "black", borderwidth: 1, borderpad: 2 };
+    });
+    window.Plotly.relayout(gd, { shapes, annotations });
+
+    chips.innerHTML = clusters.map(c => `<button type="button" data-c="${c.id}" aria-pressed="false">${c.id} · ${esc(c.title)}</button>`).join("");
+
+    const countBy = (list, keyFn) => { const m = new Map(); list.forEach(r => { const k = keyFn(r); m.set(k, (m.get(k) || 0) + 1); }); return m; };
+    function renderCard(c){
+      if(!c){
+        card.innerHTML = `<p class="cc-hint">Hover over a numbered outline in the graph, or pick one from the list above, to see what it contains. Click empty space to clear the selection.</p>`;
+        return;
+      }
+      const region = countBy(c.members, r => r.region);
+      const gender = countBy(c.members, r => r.gender);
+      const kind = countBy(c.members, r => r.category === "Popular" ? "Common surname" : r.category === "Elite" ? "Elite surname" : "Control");
+      const regionHtml = REGION_ORDER.filter(k => region.has(k)).map(k =>
+        `<span class="cc-item">${symbolSvg(REGION_STYLE[k].symbol, REGION_STYLE[k].color)}${esc(label("regiao", k))} ${region.get(k)}</span>`).join("");
+      const plain = (m, order, fmt) => order.filter(k => m.has(k)).map(k => `<span class="cc-item">${esc(fmt(k))} ${m.get(k)}</span>`).join("");
+      const examples = (c.examples || []).map(id => byId[id]).filter(Boolean).map(r =>
+        `<button type="button" data-id="${r.id}" aria-label="Open the comparison for prompt ${r.id}"><img src="${r.img}" alt=""></button>`).join("");
+      card.innerHTML = `
+        <h4>${c.id} · ${esc(c.title)}</h4>
+        <p class="cc-n">${c.members.length} of ${recs.length} images</p>
+        <p>${esc(c.description)}</p>
+        ${c.reading ? `<p class="cc-reading">Reading: ${esc(c.reading)}</p>` : ""}
+        <div class="cc-row"><span class="cc-k">Region in the prompt</span>${regionHtml}</div>
+        <div class="cc-row"><span class="cc-k">Gender in the prompt</span>${plain(gender, ["homem", "mulher", "pessoa"], k => label("genero", k))}</div>
+        <div class="cc-row"><span class="cc-k">Surname</span>${plain(kind, ["Common surname", "Elite surname", "Control"], k => k)}</div>
+        ${examples ? `<div class="cc-row"><span class="cc-k">Examples (click to compare models)</span></div><div class="cc-ex">${examples}</div>` : ""}`;
+    }
+
+    function select(id){
+      if(id === selected) return;
+      selected = id;
+      const upd = {};
+      clusters.forEach((c, i) => {
+        const on = c.id === id;
+        upd[`shapes[${i}].line.width`] = on ? 3.5 : 1.5;
+        upd[`shapes[${i}].fillcolor`] = on ? "rgba(47,93,80,0.14)" : "rgba(0,0,0,0)";
+      });
+      window.Plotly.relayout(gd, upd);
+      chips.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(Number(b.dataset.c) === id)));
+      renderCard(clusters.find(c => c.id === id));
+    }
+
+    function hitAt(ev){
+      const layer = gd.querySelector(".nsewdrag");
+      if(!layer || !gd._fullLayout) return null;
+      const r = layer.getBoundingClientRect();
+      if(ev.clientX < r.left || ev.clientX > r.right || ev.clientY < r.top || ev.clientY > r.bottom) return null;
+      const x = gd._fullLayout.xaxis.p2d(ev.clientX - r.left), y = gd._fullLayout.yaxis.p2d(ev.clientY - r.top);
+      return clusters.find(c => inPoly(x, y, c.polygon)) || null;
+    }
+    gd.addEventListener("mousemove", ev => { const c = hitAt(ev); if(c) select(c.id); });
+    gd.addEventListener("click", ev => {
+      if(overPoint) return;
+      const c = hitAt(ev);
+      select(c ? c.id : null);
+    });
+    gd.on("plotly_hover", () => { overPoint = true; });
+    gd.on("plotly_unhover", () => { overPoint = false; });
+
+    chips.addEventListener("click", ev => { const b = ev.target.closest("button"); if(b) select(Number(b.dataset.c)); });
+    chips.addEventListener("focusin", ev => { const b = ev.target.closest("button"); if(b) select(Number(b.dataset.c)); });
+    chips.addEventListener("mouseover", ev => { const b = ev.target.closest("button"); if(b) select(Number(b.dataset.c)); });
+    card.addEventListener("click", ev => { const b = ev.target.closest(".cc-ex button"); if(b) openDetail(Number(b.dataset.id)); });
+
+    const toggle = $("#clusterToggle");
+    if(toggle) toggle.addEventListener("change", () => {
+      const on = toggle.checked;
+      window.Plotly.relayout(gd, { shapes: on ? shapes : [], annotations: on ? annotations : [] }).then(() => { if(on){ const keep = selected; selected = null; select(keep); } });
+      chips.hidden = !on; card.hidden = !on;
+      panel.classList.toggle("with-info", on);
+      window.Plotly.Plots.resize(gd);
+    });
+
+    renderCard(null);
   }
 
   // ---------- Hover preview ----------
