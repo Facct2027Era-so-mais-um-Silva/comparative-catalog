@@ -321,7 +321,7 @@
     <summary>About these graphs</summary>
     <p>Each panel shows the images produced by one model, embedded with OpenCLIP and projected to two dimensions with UMAP (one image per prompt, 198 points per model). Points that sit close together are images that CLIP represents similarly. Every panel has its own coordinates (the axis ranges differ), so positions should not be compared across panels. Color and shape mark the region named in the prompt; grey circles are prompts that name no region.</p>
     <p>Hover a point to preview its image and prompt, click it to open the side-by-side comparison of all models for that prompt, drag to zoom and double-click to reset.</p>
-    <p>Numbered outlines mark groups of images with similar content. In the Google graph they were outlined by hand after inspecting the images; in the Meta and Qwen graphs they were proposed automatically from the layout of the points (average-linkage clustering into 10 groups) and then labeled after inspecting the images. Hover an outline (or pick one from the list above the graph) to read what it contains; click empty space to clear the selection.</p>
+    <p>Numbered outlines mark groups of images with similar content, outlined by hand after inspecting the images. Hover an outline (or pick one from the list above the graph) to read what it contains; click empty space to clear the selection.</p>
   </details>
 
   <div id="clipError" class="error-box" style="display:none;"></div>
@@ -699,7 +699,7 @@
 
   function setupClusters(panel, gd, recs, data, model){
     const byId = Object.fromEntries(recs.map(r => [r.id, r]));
-    const clusters = data.clusters.map(c => Object.assign({}, c, { members: recs.filter(r => inPoly(r.x, r.y, c.polygon)) }));
+    const clusters = data.clusters.map(c => Object.assign({}, c, { members: c.members ? c.members.map(id => byId[id]).filter(Boolean) : recs.filter(r => inPoly(r.x, r.y, c.polygon)) }));
     const card = panel.querySelector(".cluster-card"), chips = panel.querySelector(".cluster-chips");
     let selected = null, overPoint = false;
 
@@ -720,7 +720,7 @@
     function renderCard(c){
       if(!c){
         card.innerHTML = `<p class="cc-hint">Hover over a numbered outline in the graph, or pick one from the list above, to see what it contains. Click empty space to clear the selection.</p>
-          <p class="cc-hint">${model === "google" ? "These outlines were drawn by hand after inspecting the images." : "These outlines were proposed automatically from the layout of the points (average-linkage clustering, 10 groups) and labeled after inspecting the images."}</p>`;
+          <p class="cc-hint">These outlines were drawn by hand after inspecting the images.</p>`;
         return;
       }
       const region = countBy(c.members, r => r.region);
