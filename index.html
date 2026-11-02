@@ -700,6 +700,8 @@
   function setupClusters(panel, gd, recs, data, model){
     const byId = Object.fromEntries(recs.map(r => [r.id, r]));
     const clusters = data.clusters.map(c => Object.assign({}, c, { members: c.members ? c.members.map(id => byId[id]).filter(Boolean) : recs.filter(r => inPoly(r.x, r.y, c.polygon)) }));
+    const polyArea = p => Math.abs(p.reduce((s, q, i) => { const n = p[(i + 1) % p.length]; return s + q[0] * n[1] - n[0] * q[1]; }, 0)) / 2;
+    clusters.forEach(c => { c.area = polyArea(c.polygon); });
     const card = panel.querySelector(".cluster-card"), chips = panel.querySelector(".cluster-chips");
     let selected = null, overPoint = false;
 
@@ -762,7 +764,9 @@
       const r = layer.getBoundingClientRect();
       if(ev.clientX < r.left || ev.clientX > r.right || ev.clientY < r.top || ev.clientY > r.bottom) return null;
       const x = gd._fullLayout.xaxis.p2d(ev.clientX - r.left), y = gd._fullLayout.yaxis.p2d(ev.clientY - r.top);
-      return clusters.find(c => inPoly(x, y, c.polygon)) || null;
+      const hit = clusters.filter(c => inPoly(x, y, c.polygon));
+      if(!hit.length) return null;
+      return hit.reduce((m, c) => (c.area < m.area ? c : m));
     }
     gd.addEventListener("mousemove", ev => { const c = hitAt(ev); if(c) select(c.id); });
     gd.addEventListener("click", ev => {
